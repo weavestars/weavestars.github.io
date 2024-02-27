@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>WJJ Pygame</title>
+        <meta name="charset" content="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../css/Pygame.css">
+        <!--Korean Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+        <script src="../js/listcontrol.js"></script>
+    </head>
+
+    <body>
+        <div id="greypaper">
+            <div id="whitepaper">
+                <header>
+                <h1>Pygame</h1>
+                </header>
+                <h5>Shortcuts</h5>
+                <hr>
+                <nav>
+                        <div class="button" id="button1">Daily Record &#11206;
+                            
+                        </div>
+                        <div class="button" id="button2">Practice Files &#11206;
+
+                        </div>
+                        <div class="button" id="button3">Extra Notes &#11206;
+
+                        </div>
+                        <!--<div id="button4"></div>
+                        <div id="button5"></div>
+                        <div id="button6"></div>
+                        <div id="button7"></div>-->
+                </nav>
+                <hr>
+                <br>
+                <div id="align_aside_article">
+                    <aside>
+                    <div id="list">
+                        <br>
+                        <h5>List</h5>
+                        <hr>
+                        <div id="_0" class="listitem" onclick="getSwitchDocument(this.id)">Intro</div>
+                        <div id="_1" class="listitem" onclick="getSwitchDocument(this.id)">PyGame What</div>
+                        <div id="_2" class="listitem" onclick="getSwitchDocument(this.id)">PyGame</div>
+                        <div id="_3" class="listitem" onclick="getSwitchDocument(this.id)">PyGame</div>
+                        <div id="_4" class="listitem" onclick="getSwitchDocument(this.id)">PyGame</div>
+                        <div id="_5" class="listitem" onclick="getSwitchDocument(this.id)">PyGame</div>
+                        <div id="_6" class="listitem" onclick="getSwitchDocument(this.id)">PyGame</div>
+                        <div id="_7" class="listitem" onclick="getSwitchDocument(this.id)">PyGame</div>
+                        <div id="_8" class="listitem" onclick="getSwitchDocument(this.id)">PyGame</div>
+                        <div id="_9" class="listitem" onclick="getSwitchDocument(this.id)">PyGame</div>
+                    </div>
+                    </aside>
+
+                    <!--for aligning-->
+                    <div id="noname"></div>
+
+                    <article>
+                    <div id="documents">
+                        <br>
+                        <h5>documents</h5>
+                        <hr>
+                        <!--You Can Write Here-->
+                        <!--Remember to have <div class="documentitem" id =doc#> for appropriate operation-->
+
+                        <div class="documentitem" id="doc_0">
+                        
+                        <h2>인트로</h2>
+                        <p>안녕하십니까. 경희대학교 정보전자신소재공학과 23학번 정우진입니다. </p>
+                        <p>이 웹사이트는 소프트웨어융합학과 및 컴퓨터 공학과 복수전공을 위한 사이트로, 개인적 목적으로 제작된 사이트입니다.</p>
+                        <p>이 사이트에 포함된 모든 사진의 저작권은 저 또는 제 3자에 있으므로 함부로 도용을 금지합니다.</p>
+                        <p>이 사이트의 소스코드는 공개되어있으나, 상업적 목적으로 도용하는 것은 허가하지 않습니다. 
+                            다른 목적으로는 편히 이용하셔도 됩니다.</p>
+                        <p>제 활동을 확인하러 오신 교수님 중 한 분이라면 편하게 머물다 가시기 바랍니다.</p>
+                        <br>
+                        </div>
+
+                        <div class="documentitem" id="doc_1">
+                        <h2>들어가기 앞서...</h2>
+                        <p>
+                            지난 학기에 배운 웹파이썬으로 계획 짜주는 웹 (해야 할 것과 그 소요시간을 작성하고, 
+                            일별 공부 가능한 시간을 작성하면 자동적으로 언제 무엇을 할지 배치해 주는 기능)과 게임(아직 구상은 안했지만, 
+                            pygame을 배워 만드려고 한다.)을 만들어 포트폴리오로 제출하고자 하였다. 
+                        </p>
+                        <p>
+                            하지만 나는 경솔했다. "‘웹’파이썬을 배웠으니까 웹개발은 별 무리 없이 진행되겠지!" 라고 생각했던 
+                            난 javascript를 파이썬으로 대체할 수 있을 줄 알고 책을 구매해서 django를 시작했다. 첫 50페이지는 수월했다.  
+                            프로그램 설치 과정이 대부분이었기 때문이다. 한 페이지, 한 페이지 넘기기 시작했다. 낌새가 이상했다. 
+                            내가 아는 파이썬은 거의 나오지도 않고 이상한 html? css? js?만 계속 나와 이게 뭔가 싶었다. 그때 깨달았다. 
+                            파이썬은 서버와 데이터, 즉 백엔드에만 쓰인다는 것을.... 
+                        </p>
+                        <p>
+                            그래서 빠르게 프론트엔드를 배우는 것으로 방향을 전환했고 그 학습일지를 작성하고자 한다.
+                            프론트엔드를 학습하면서 여러 연습 웹페이지를 만들어보고 최종적으로 프론트엔드로 정적 웹페이지 개발을 하여 
+                            웹호스팅 서비스의 도움을 받아 개인 블로그처럼 이용하고자 한다. 
+                            그 뒤에는 pygame과 같은 프로젝트를 진행하여 여기다 올려보겠다. 다만 정적 페이지다 보니 파일 업로드와 
+                            다운로드는 어렵기에 그 부분은 구글 드라이브를 이용하려고 한다. 
+                        </p>
+                        <br>
+                        </div>
+
+                        <div class="documentitem" id="doc_2">
+                            <h2>HTML 이란?</h2>
+                            <p>HTML: Hyper Text Markup Language
+                                HTML은 웹페이지를 만드는데 쓰이는 표준 마크업 언어이다.<br>
+                                여기서 마크업 언어란 ‘태그 등을 이용하여 문서나 데이터의 구조를 명기하는 언어의 한 가지’를 말한다.<br>
+                                출처: <a href="https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EC%97%85_%EC%96%B8%EC%96%B4">여기</a>
+                                <br>
+                                즉 정리하면 다음과 같다.<br>
+                                HTML은 여러 태그로 이루어져 있다. (p, h1 등)<br>
+                                이것들은 문서나 데이터의 구조를 명기하는데 쓰인다.<br>
+                                우리가 흔히 보는 웹페이지는 웹 디자이너가 이 마크업 언어들로 어떻게 구조할지 (배치될 지) 생각해보고 
+                                구축한 것이라고 생각할 수 있다.<br>
+                                한 마디로 HTML은 웹페이지라는 ‘문학 작품’을 작성하는데 지켜야 하는 ‘문법’이라고 할 수 있겠다.
+                                </p>
+                                <br>
+                        </div>
+                    </div>
+                    </article>
+                </div>
+                <div id="noname2"></div>
+                
+            </div>
+        </div>
+        <footer>
+            <br>
+            <div id="footer_grey">
+                <div id="footer_white">
+                    <h4>This Website is Made for College of Software, Kyunghee University.
+                        <br>All Rights Reserved.</h4>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

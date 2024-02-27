@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>WeaveStars</title>
+        <meta name="charset" content="UTF-8">
+        <meta name="viewport" width="device-width,initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="icon" href="../imgs/star_gif/star_33.png">
+    </head>
+    
+<!--Center-->
+<body id="base" style="background-color: black;"></body>
+<header>
+        <div class="header">
+        <h1 id="Stars" onclick="makeStarFall(this.id)">Stars</h1>
+        </div>  
+</header>
+
+<!--Arrows-->
+<main id="main">
+<!--Left Top Arrow is the Main Arrow-->
+<!--Left Top-->
+    <img id="arrow1" onclick="switchBackground_Link(this.id)" onmouseover="mainArrowHover()" 
+    class="arrow_top_left img_arrow" src="../imgs/camera_border_left_top_removebg-preview_white_thin.png" usemap="#topleft">
+    <map name="topleft" >
+        <area shape="rect" coords="27,27,195,195">
+    </map>
+
+<!--Right Top-->
+    <img id="arrow2" onclick="switchBackground_Link(this.id)" onmouseover="mainArrowHover()"
+    class="arrow_top_right img_arrow" src="../imgs/camera_border_right_top_removebg-preview_white_thin.png" usemap="#topright">
+    <map name="topright">
+        <area shape="rect" coords="0,195,168,27">
+    </map>
+
+<!--Left Bottom-->
+    <img id="arrow3" onclick="switchBackground_Link(this.id)" onmouseover="mainArrowHover()"
+    class="arrow_bottom_left img_arrow" src="../imgs/camera_border_left_bottom_removebg-preview_white_thin.png" usemap="#bottomleft">
+    <map name="bottomleft">
+        <area shape="rect" coords="27,168,195,0">
+    </map>
+
+<!--Right Bottom-->
+    <img id="arrow4" onclick="switchBackground_Link(this.id)" onmouseover="mainArrowHover()"
+    class="arrow_bottom_right img_arrow" src="../imgs/camera_border_right_bottom_removebg-preview_white_thin.png" usemap="#bottomright">
+    <map name="bottomright">
+        <area shape="rect" coords="0,0,168,168">
+    </map>
+
+<!--Battery Icon-->
+    <img class="battery" src="../imgs/battery-10-128.png">
+
+<!--Reset Button-->
+    <a onclick="Button_Reset()" href="https://github.com/WeaveStars" id="reset" class="reset" target="_blank";></a>
+
+<!--Help Button-->
+    <img id="help" src="../imgs/question_mark_round_1_white.png" title="Help">
+</main>
+
+</body>
+
+<script src="../js/main.js"></script>
+</html>

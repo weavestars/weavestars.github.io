@@ -1,0 +1,168 @@
+/*tags*/
+body{
+    background-color: #D1B217;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h5{
+    text-align:left;
+    display:inline block;
+    margin:0;
+    color:rgba(0, 0, 0, 0.577);
+}
+
+h1,h3{
+    font-family:"Nanum Myeongjo", serif;
+    margin:30px 0;
+}
+pre{
+    font-size:17px;
+    font-family:"Nanum Myeongjo", serif;
+    line-height:25px;
+    color:rgb(0, 155, 0);
+}
+p,ol,ul,li,dl,dd,dt {
+    font-size:17px;
+    font-family:"Nanum Myeongjo", serif;
+    line-height:30px;
+    text-indent:20px;
+}
+
+/*border papers*/
+#greypaper{
+    width:90%;
+    background-color: grey;
+    margin:auto;
+    margin-top:3vw;
+    padding:1vw;
+}
+
+#whitepaper{
+    background-color: white;
+    margin:auto;
+    text-align:center;
+    padding:1vw 5vw;
+}
+
+#whitepaper h1{
+    font-size:7vw;
+}
+
+/*navigation bar*/
+nav {
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    position:relative;
+}
+
+.button{
+    flex-grow:1;
+    font-size:large;
+    border-radius:1vw;
+    padding:2px;
+    cursor:context-menu;
+    box-sizing: border-box;
+}
+
+#button1:hover{
+    box-shadow:1px 1px 2px rgb(135, 135, 135) inset;
+}
+
+#button2:hover{
+    box-shadow:1px 1px 2px rgb(135, 135, 135) inset;
+}
+
+#button3:hover{
+    box-shadow:1px 1px 2px rgb(135, 135, 135) inset;
+}
+
+/*aside*/
+aside{
+    margin-right:0;
+    width:10%;
+    flex-grow:3;
+}
+
+aside #list{
+    list-style-type:none;
+    list-style-position: inside;
+    text-align: left;
+}
+
+.listitem{
+    font-size: 20px;
+    padding:10px 3px;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness:2px;
+    cursor:pointer;
+}
+aside .listitem:hover{
+    background-color: rgb(232, 232, 232);
+}
+aside #_0{
+    box-shadow:1px 1px 2px rgb(135, 135, 135) inset;
+}
+
+/*documents*/
+article {
+    width:50%;
+    box-sizing: border-box;
+    text-align: left;
+    margin-right:0;
+    flex-grow:7;
+}
+/*Default setting for Each Documents*/
+#doc1{
+    display:block;
+}
+#doc2{
+    display:none;
+}
+#doc3{
+    display:none;
+}
+
+/*#documents{
+    box-shadow:1px 1px 2px rgb(135, 135, 135) inset;
+}
+*/
+
+/*align aside and article(document)*/
+#align_aside_article{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    
+}
+#noname{
+    flex-grow:1;
+}
+#noname2{
+    box-sizing:border-box;
+    height:100px;
+}
+
+/*footer*/
+#footer_grey{
+    background-color: grey;
+    font-size:1vw;
+    color:white;
+    width:90%;
+    margin-top:3vw;
+    padding:1vw;
+    margin:auto;
+    text-align: center;
+}
+#footer_white{
+    background-color: rgb(205, 205, 205);
+    text-align:center;
+    font-size:1vw;
+    color:rgb(123, 123, 123);
+    margin:auto;
+    padding:1vw 5vw;
+}
+#footer_white >img{
+    float:right;
+}

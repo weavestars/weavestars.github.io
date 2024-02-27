@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>CSS</title>
+        <meta name="charset" content="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../css/CSS.css">
+        <!--Korean Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="greypaper">
+            <div id="whitepaper">
+                <header>
+                <h1>CSS</h1>
+                </header>
+                <h5>Shortcuts</h5>
+                <hr>
+                <nav>
+                        <div class="button" id="button1">Daily Record &#11206;
+                            
+                        </div>
+                        <div class="button" id="button2">Practice Files &#11206;
+
+                        </div>
+                        <div class="button" id="button3">Extra Notes &#11206;
+
+                        </div>
+                        <!--<div id="button4"></div>
+                        <div id="button5"></div>
+                        <div id="button6"></div>
+                        <div id="button7"></div>-->
+                </nav>
+                <hr>
+                <br>
+                <div id="align_aside_article">
+                    <aside>
+                    <div id="list">
+                        <br>
+                        <h5>List</h5>
+                        <hr>
+                        <div id="_0" class="listitem" onclick="getSwitchDocument(this.id)">Intro</div>
+                        <div id="_1" class="listitem" onclick="getSwitchDocument(this.id)">What is CSS?</div>
+                        <div id="_2" class="listitem" onclick="getSwitchDocument(this.id)">How to add CSS</div>
+                        <div id="_3" class="listitem" onclick="getSwitchDocument(this.id)">CSS Comments & Color</div>
+                        <div id="_4" class="listitem" onclick="getSwitchDocument(this.id)">CSS Box Design</div>
+                        <div id="_5" class="listitem" onclick="getSwitchDocument(this.id)">CSS Text & Font</div>
+                        <div id="_6" class="listitem" onclick="getSwitchDocument(this.id)">CSS Table & List</div>
+                        <div id="_7" class="listitem" onclick="getSwitchDocument(this.id)">CSS Layout Function (1)</div>
+                        <div id="_8" class="listitem" onclick="getSwitchDocument(this.id)">CSS Layout Function (2) & Selectors</div>
+                        <div id="_9" class="listitem" onclick="getSwitchDocument(this.id)">CSS Advanced-Box Decoration</div>
+                        <div id="_10" class="listitem" onclick="getSwitchDocument(this.id)">CSS Advanced-Animation Properties</div>
+                        <div id="_11" class="listitem" onclick="getSwitchDocument(this.id)">CSS Advanced-Layout Properties</div>
+                    </div>
+                    </aside>
+
+                    <!--for aligning flex-->
+                    <div id="noname"></div>
+
+                    <article>
+                    <div id="documents">
+                        <br>
+                        <h5>documents</h5>
+                        <hr>
+                        <!--You Can Write Here-->
+                        <!--Remember to have <div class="documentitem" id =doc#> for appropriate operation-->
+
+                        <div class="documentitem" id="doc_0">
+                        
+                            <h2>인트로</h2>
+                            <p>안녕하십니까. 경희대학교 정보전자신소재공학과 23학번 정우진입니다. </p>
+                            <p>이 웹사이트는 소프트웨어융합학과 및 컴퓨터 공학과 복수전공을 위한 사이트로, 개인적 목적으로 제작된 사이트입니다.</p>
+                            <p>이 사이트에 포함된 모든 사진의 저작권은 저 또는 제 3자에 있으므로 함부로 도용을 금지합니다.</p>
+                            <p>이 사이트의 소스코드는 공개되어있으나, 상업적 목적으로 도용하는 것은 허가하지 않습니다. 
+                                다른 목적으로는 편히 이용하셔도 됩니다.</p>
+                            <p>제 활동을 확인하러 오신 교수님 중 한 분이라면 편하게 머물다 가시기 바랍니다.</p>
+                            <br>
+    
+                            <h2>들어가기 앞서...</h2>
+                            <p>
+                                지난 학기 이성원 교수님의 웹파이썬 강좌를 수강했다. 
+                                교수님께서 보실 이 글에 쓰기 좀 쑥쓰럽지만 
+                                매주 올라오는 교수님의 두 강의는 내 22학점 시간표의 오아시스였다. 
+                                팀플 네 개를 병행하며
+                                진짜 안좋은 의미로 <i>"각양각색의"</i> 사람을 만났기 때문이다. 
+                                <br>
+                            </p>
+    
+                            <p>그래서 그렇기도 하고, 또 교수님 강의력이 워낙 좋으셔서 수업이 머리에 쏙쏙 들어왔다. 
+                            매주 수업 시간이 되면 책상 앞에 앉아 기대되는 마음으로 책상에 앉아 '오늘은 어떤 것들을 배우고 그걸로 무엇을 만들 수 있을까?'라고 생각할 수 있었던 수업이었다.</p>
+                            <p>
+                            어쨌든 그렇게 종강하고 2주 정도 여유를 가지며 생각했다. </p>
+                            <p><b>"이렇게 배운 파이썬, 여기서 끝낼 것인가?"</b></p>
+                            <p><b>"나는 성적 때문에 어쩔 수 없이 내 과로 왔지만 원래 꿈은 프로그래머였다. 그 꿈을 이룰 수 있지 않을까?"</b></p>
+                            <p><b>"나는 열심히 공부해서 웹파이썬 만점을 받았다. 물론 비전공자 반이라 좀 쉬웠던 것도 있지만 소질도 좀 있는 것은 아닐까?"</b></p>
+                            <p><b>"나는 늙어서 '이때 이랬으면...'하고 후회하기 싫다. 그럼 뭘 해야 할까? 내 능력으로 사람들을 도울 수 있으면 어떨까?
+                                    그 능력이 프로그래밍이라면?"</b></p>
+                            <p><b>"그래, 솔직히 말해서 내가 프로그래밍에 소질이 있는지는 아직 잘 모르겠다. 그렇지만 배운다면 누구보다도 열심히 할 자신이 있다. 소프트웨어융합대학으로 다전공을
+                                    하는 것은 어떨까?</b></p>
+                                
+                            <p>그렇게 만든 포트폴리오가 이 웹사이트다. (물론 이 글을 작성하는 시점에는 python이 아닌 프론트엔드를 배우고 있었지만 말이다.)</p>
+                            
+                            <p>
+                                원래는<span title="해야 할 것과 그 소요시간을 작성하고 
+                                일별 공부 가능한 시간을 작성하면 자동적으로 언제 무엇을 할지 배치해 주는 기능" style="color:blue"> 계획 짜주는 웹</span>과<span title="아직 구상은 안했지만, 
+                                pygame을 배워 만드려고 한다." style="color:blue"> 게임</span>을 만들어 포트폴리오로 제출하고자 하였다. 
+                            </p>
+                            <p>
+                                그런데 이때 간과한게 Javascript를 python으로 대체할 수 있는 줄 알았다. CSS도 알고는 있었지만 "꼭 필요한가?"라고 생각했다. 그렇게 아무것도 모르고 django를
+                                시작했으니 당연히 이해를 못한다. 
+                            </p>
+                            <p>
+                                그렇게 3일 정도 방황하다 CSS와 Javascript가 꼭 필요하다고 생각했고
+                                빠르게 프론트엔드를 배우는 것으로 방향을 전환했다. 
+                                그리고 그 학습일지를 웹사이트로 만들어 호스트 하도록 계획했다.
+                            </p>
+                            <p>  
+                                그 뒤에는 pygame과 같은 프로젝트를 진행하여 여기다 올려보려고 한다.
+                            </p>
+                            <br>
+                        </div>
+
+                        <div class="documentitem" id="doc_1">
+                            <h2>CSS란?</h2>
+                            <h3>&#x2022;CSS: Cascading Style Sheet</h3>
+                            <p>HTML이 웹페이지를 만드는데 쓰이는 표준 마크업 언어였다면 CSS는 그 HTML을 더 보기 좋게 디자인한다.</p>
+                            <br>
+
+                            <h2>CSS Syntax</h2>
+                            <h3>&#x2022;CSS의 표현 방식</h3>
+                            <p>CSS는 다음과 같이 표현한다.</p>
+                            <pre>
+selector {
+property: value;
+property: value;
+property: value;
+}
+                            </pre>
+                            <p>여기서 selector는 element의 이름이거나 (즉 &lt;p&gt;의 p, &lt;h1&gt;의 h1 등) class Atrribute와 Id Attribute에서 설정한 클래스와 아이디이다.</p>
+                            <p>property는 내가 설정하고 싶은 스타일을 의미하고 value는 그 값을 의미한다.</p>
+                        </div>
+
+                        <div class="documentitem" id="doc_2">
+                            <h2>CSS에서 어떻게 element를 선택할까?</h2>
+                            <p>Selector를 이용한다. Selector는 그 이름대로 element를 선택한다.</p>
+
+                            <h3>&#x2022;Selector의 종류</h3>
+                            <p>Selector의 종류에는 다음 다섯가지가 있다.<br>
+                            <ul>
+                                    <li>Simple Selector: 태그 이름, 클래스, 아이디를 통해 element를 선택한다.</li>
+                                    <li>Combinator Selector: element의 <span title="부모 관계, 자녀 관계, 자손 관계 etc." style="text-decoration: underline dotted;">관계</span>를 통해 선택한다.</li>
+                                    <li>Pseudo-Class Selector: element의 <span title="마우스가 위에 있는가, 클릭했는가 etc." style="text-decoration: underline dotted;">상태</span>를 통해 선택한다.</li>
+                                    <li>Pseudo-Element Selector: element의 일부분만 선택하는 selector이다.</li>
+                                    <li>Attribute Selector: element의 attribute나 그 값을 통해 선택하는 selector이다.</li>
+                            </ul>
+                            </p>
+                            <br>
+
+                            <h2>CSS를 HTML에 추가하는 방법</h2>
+                            <p>CSS를 추가하는 방법에는 세가지가 있다.</p>
+                            <p>
+                            <ol>
+                            <li>Inline CSS: element내에 style Attribute로 직접 스타일을 추가하는 방식이다.<br>
+                            element 하나하나 다 해주어야 한다는 번거로움이 있다.</li>
+                            <li>Internal CSS: head 영역에 &lt;style&gt; element로 설정한다.</li>
+                            <li>External CSS: CSS파일을 따로 만들어 html과 연결한다.</li>
+                            </ol>
+                            </p>
+                            <br>
+
+                            <h2>CSS파일과 HTML을 어떻게 연결할까?</h2>
+                            <p>&lt;link&gt; 를 &lt;head&gt;영역에 추가한다.</p>
+                            <p>예:</p>
+                            <p>&lt;link rel=”stylesheet” href=”파일경로”&gt;</p>
+                            <p>여기서 stylesheet의 의미는 href의 그 파일이 CSS 파일이라는 것을 나타낸다.</p>
+                        </div>
+
+                        <div class="documentitem" id="doc_3">
+                            <h2>CSS Comments</h2>
+                            <h3>&#x2022;주석</h3>
+                            <p>HTML처럼 CSS에도 주석을 달 수 있다. 다음과 같이 사용한다.</p>
+                            <pre>
+/*내용*/
+                            </pre>
+                            <p>여러 줄이어도 같은 방식으로 할 수 있다.</p>
+                            <pre>
+/*내용
+내용
+내용
+*/
+                            </pre>
+
+                            <h2>CSS Colors</h2>
+                            <h3>&#x2022;Predefined Colors</h3>
+                            <p>CSS에는 이미 그 값이 정의돼 있는 색들이 있다. red, orange, tomato, skyblue, lightgreen, yellowgreen, grey 등이 있다. (총 140가지)</p>
+                            <br>
+
+                            <h3>&#x2022;RGB(A)</h3> 
+                            <p>RGB는 각각 Red, Green, Blue 의 약자다. 각 값을 0부터 255까지의 수로 나타내며, 숫자가 클수록 해당 색의 비중이 증가한다.</p>
+                            <p>0,0,0은 검정, 255,255,255는 하양이다. 255,0,0은 빨강, 0,255,0은 초록, 0,0,255는 파랑이다. 255,255,0은 초록이다.</p>
+                            <p>이런 방식으로 색을 조합해 다양한 색을 만들어낸다.</p>
+                            <br>
+                            <p>A(lpha)는 opacity, 즉 불투명성을 의미한다. 숫자가 클수록 선명하고, 작을수록 투명해진다.</p>
+                            <p>퍼센트로 나타내므로 0부터 1사이의 값 또는 0%부터 100% 사이의 값으로 나타난다.</p>
+                            <br>
+
+                            <h3>&#x2022;HEX</h3>
+                            <p>HEX는 #RRGGBB이다. 즉 rgb처럼 RR의 값이 클수록 빨간색의 비중이 커진다.</p>
+                            <p>일반 숫자와 다르게 여기서 수는 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f로 0이 최소 f가 최대이다.</p>
+                            <p>생각해보면 16 x 16= 256으로 나타낼 수 있는 색의 가짓수는 RGB와 거의 같다.</p>
+                            <br>
+
+                            <h3>&#x2022;HSL(A)</h3>
+                            <p>각 글자는 Hue, Saturation, Lightness의 약자이다. hue 색상을 의미하며, 0(빨강)을 시작으로 120(초록), 240(파랑), 360(빨강)을 나타낸다.</p>
+                            <p>Saturation은 채도를 의미한다. 0에 가까울수록 회색에 가까워진다. 퍼센트 값으로 나타낸다.</p>
+                            <p>Lightness는 명도다. 0에 가까울수록 검은색이 된다. 마찬가지로 퍼센트 값으로 나타낸다.</p>
+                            <p>A(lpha)의 의미는 RGBA에서의 A와 같다.</p>
+                        </div>
+
+                        <div class="documentitem" id="doc_4">
+                            <p>배우기 전: 지난 시간까지 CSS의 기초 이론을 학습했다. 오늘부터는 실제로 HTML파일에 CSS를 적용하며 element가 어떻게 바뀌고 스타일 되는지 배울 예정이다.</p>
+                            <p>배운 후: 전에는 일반적인 글처럼 모든 element가 왼쪽에 배치되었다면 이제는 border와 background로 꾸미고 
+                                padding과 margin으로 배치를 바꿀 수 있게 되어 더욱 생동감 있게 느껴진다.</p>
+                            <hr>
+
+                            <h2>CSS Background</h2>
+                            <h3>&#x2022;배경</h3>
+                            <p><span title="정확히는, 가질만 한 것들이 가진다. img자체를 배경으로 넣지, img에 배경을 넣는다는 생각을 잘하지 않는다." style="text-decoration:dotted underline">
+                                모든</span> HTML element는 배경을 가진다.</p>
+                            <p>배경은 다음 5가지 속성을 가질 수 있다.
+                                <dl>
+                                <dt>(1)	Background Color</dt>
+                                <dd>말 그대로 배경의 색을 정할 수 있다. 다음과 같이 사용한다.</dd>
+                                <pre>
+p {
+background-color:red;
+}
+                                <dd>red 대신 앞서 배운 RGB(A), HSL(A), HEX를 넣을 수도 있다.</dd>
+                                </pre>
+                                <br>
+
+                                <dt>(2)	Background Image</dt>
+                                <dd>말 그대로 배경에 이미지를 추가할 수 있다. 다음과 같이 사용한다.</dd>
+                                <pre>
+p {
+background-image:url(“파일경로”)
+}
+                                </pre>
+                                <dd>여기서, 앞으로 CSS에서 value로 쓰이는 파일경로는 url(“파일경로”)로 작성한다.</dd>
+                                <dd>파일경로 작성법은 HTML File Path와 같다. png, gif, jpg 모두 가능하다.</dd>
+                                <br>
+
+                                <dt>(3)	Background Repeat</dt>
+                                <dd>Background Image를 추가하면 세로 및 가로 방향으로 반복되는 것이 기본 값(default)이다.</dd>
+                                <dd>즉 이 배경 반복 여부를 결정하는 속성이다. 다음과 같이 사용한다.</dd>
+                                <pre>
+p {
+background-image:url(“파일경로”) /*이미지 파일*/
+background-repeat:no-repeat; /*반복 없음*/
+background-repeat:repeat-x; /*x축 반복*/
+background-repeat:repeat-y; /*y축 반복*/
+}
+                                </pre>
+                                <br>
+
+                                <dt>(4)	Background Position</dt>
+                                <dd>배경 이미지가 어디에 위치할지 결정하는 속성이다. 다음과 같이 사용한다.</dd>
+                                <pre>
+p {
+background-image:url(“파일경로”) /*이미지 파일*/
+background-repeat:no-repeat; /*반복 없음*/
+background-postion: right top; /*오른쪽 위*/
+}
+                                </pre>
+                                <dd>왼쪽은 left, 아래는 bottom으로 쓴다. </dd>
+                                <img src="../imgs/CSScapturefiles/capture1.PNG" width="350px" height="200px">
+                                <img src="../imgs/CSScapturefiles/capture2.PNG" width="350px" height="200px">
+                                <img src="../imgs/CSScapturefiles/capture3.PNG" width="350px" height="200px">
+                                <img src="../imgs/CSScapturefiles/capture4.PNG" width="350px" height="200px">
+                                <dd>그림처럼 top/bottomleft/right의 순서는 바뀌어도 상관없다.</dd>
+                                <br>
+
+                                <dt>(5)	Background Attachment</dt>
+                                <dd>배경 이미지가 스크롤 했을 때 그 자리에 고정되어 있을지, 같이 따라 내려올지 결정하는 속성이다. 다음과 같이 사용한다.</dd>
+                                <pre>
+p {
+background-image:url(“파일경로”) /*이미지 파일*/
+background-repeat:no-repeat; /*반복 없음*/
+background-attachment: fixed /*고정, 그 자리에 남아있음*/
+background-attachment: scroll /*스크롤, 따라 내려옴.*/
+}
+                                </pre>
+                                <br>
+
+                                <dt>(6)Background Shorthand</dt>
+                                <dd>앞서 배운 것들을 하나의 “background” 속성으로 전부 나타낼 수 있다.</dd>
+                                <dd>순서는 background color, image, repeat, attachment, position이다.</dd>
+                                <dd>예를 들어 다음과 같이 나타낸다.</dd>
+                                <pre>
+background:hsla(0,1,1,0.5) url(“thumb.jpg”) no-repeat scroll bottom right
+                                </pre>
+                                <br>
+                                </dl>
+                            </p>
+                            <br>
+                            <hr>
+
+                            <h2>CSS Border</h2>
+                            <h3>&#x2022;테두리</h3>
+                            <p>모서리 부분을 꾸미는 속성이다. 모든 element가 이 속성을 가질 수 있다. 다음 3가지 속성이 있다.</p>
+                            <p>
+                                <dl>
+                                <dt>(1)	Border Style</dt>
+                                <dd>Border의 스타일을 결정하는 속성이다. 다음 종류가 있다.<br>
+                                    <ol>
+                                        <li>solid 직선</li>
+                                        <li>dotted 점선</li>
+                                        <li>dashed 점선과 비슷한데, 점선보다 선의 길이가 좀 더 길다.</li>
+                                        <li>groove 생략</li>
+                                        <li>ridge 생략</li>
+                                        <li>inset 생략</li>
+                                        <li>outset 생략</li>
+                                        <li>none 없음</li>
+                                        <li>hidden 숨김 (있지만 안보임.)</li>    
+                                    </ol>
+                                </dd>
+                                <dd>다음과 같이 사용한다.</dd>
+                                <pre>
+border-style:solid;
+                                </pre>
+                                <br>
+
+                                <dt>(2)	Border Width</dt>
+                                <dd>모서리 두께를 설정하는 속성이다.</dd>
+                                <dd>선결정된 두께를 사용하는 방식, 내가 구체적인 두께를 설정하는 방식 두가지가 있다.</dd>
+                                <dd>
+                                    <ol>
+                                        <li>선결정된 두께를 사용<br>border-width:thin or medium or thick;</li>
+                                        <li>구체적인 두께를 설정<br>border-width:10px;</li>
+                                    </ol>
+                                </dd>
+                                <br>
+
+                                <dt>(3)	Border Color</dt>
+                                <dd>모서리 색을 결정하는 속성이다. 다음과 같이 쓴다.</dd>
+                                <dd><pre>
+border-color:rgba(0,0,0,0)
+border-color:transparent
+                                </pre></dd>
+                                <dd>여기서 transparent는 ‘투명’을 의미한다.</dd>
+                            </dl>
+                        </p>
+                        
+                        <h3>&#x2022;각 모서리를 따로 설정할 수 있을까?</h3>
+                        <p>있다. 다음과 같이 사용한다.<br>
+                            <pre>
+border-top-style: dotted;
+border-bottom-style: dashed;
+border-right-width:5px;
+border-left-color:rgba(100,140,120);
+                            </pre>
+                        </p>
+                        <p>다음의 규칙을 따라 더 쉽게 설정할 수도 있다.</p>
+                        <p><ol>
+                            <li>
+                            값이 4개<br>
+                            각각 상,우,좌,하의 속성을 결정한다.<br>
+                            예: border-style:groove dashed solid outset;
+                            </li>
+
+                            <li>
+                            값이 3개<br>
+                            각각 상,좌우,하의 속성을 결정한다.<br>
+                            예: border-width:5px 10px 20px;
+                            </li>
+
+                            <li>
+                            값이 2개<br>
+                            각각 상하,좌우의 속성을 결정한다.<br>
+                            예: border-color: 10px 20px;
+                            </li>
+
+                            <li>
+                            값이 1개<br>
+                            상하좌우 전부를 설정한다.<br>
+                            예: border-style:outset;
+                            </li>
+                        </ol></p>
+                        <h3>&#x2022;Background Shorthand처럼 Border도 짧게 할 수 있는가?</h3>
+                        <p>가능하다. 순서는 width, style(필수), color다.<br>예: border:4px solid red;</p>
+                        <br>
+
+
+                        <h3>&#x2022;둥근 모서리</h3>
+                        <p>모서리를 둥글게 만들 수도 있다. </p>
+                        <p>border-radius는 모서리(각 꼭지점 부분)의 반지름을 설정한다. </p>
+                        <p>예: border-radius:5px;</p>
+                        <p>참고로, border-radius:50%; 처럼 %도 가능하다. 이 경우 전체를 100%로 가정하고 해당 비율만큼 반지름이 설정된다.</p>
+                        <br>
+                        <hr>
+
+                        <h2>CSS Margins</h2>
+                        <h3>&#x2022;마진 (Margin) </h3>
+                        <p>Border 밖 다른 element 와의 거리를 설정하는 속성이다. Border와 비슷하게 설정할 수 있다.</p>
+                        <p>value 값은 4가지 값 중 하나를 가질 수 있다.</p>
+
+                        <ol>
+                        <li>길이: 특정한 길이를 직접 설정 (px, em 등)</li>
+                        <li>%: 그 element가 들어있는 곳에서의 비율로 설정</li>
+                        <li>auto: 가운데 정렬 (가능한 영역 내에서)</li>
+                        <li>inherit: 부모 element와 같은 값을 따라감.</li>
+                        </ol>
+
+                        <p>다음과 같이 사용한다.</p>
+                        <pre>
+margin-top:10px;
+margin-left:30%;
+margin-right:inherit;
+margin:auto;
+                        </pre>
+                        <br>
+                        <h3>&#x2022;border와 마찬가지로 더 쉽게 쓸 수 있는가?</h3>
+                        <p>그렇다. 이것도 border처럼 값이 하나이냐, 두 개 이냐, 세 개 이냐, 네 개 이냐에 따라 나눌 수 있다. 규칙은 border와 같으므로 생략한다.</p>
+                        <p>예: margin:10px 20px; /*상하 각각 10px, 좌우 각각20px*/</p>
+
+                        <h3>&#x2022;Margin Collapse</h3>
+                        <p>두 element의 Margin이 겹칠 때 일어나는 현상을 의미한다.</p>
+                        <p>예를 들어 A라는 element아래에 B라는 element가 있다고 하자. A의 margin-bottom이 10px이고 B의 margin-top이 30px 이라면 다 합한 40px가 아니라 더 큰 B의 30px만 남고 나머지는 무시된다.</p>
+                        <p title="참고로, 좌우로는 이 현상이 일어나지 않는다. 상하관계일 경우에만 발생한다." style="text-decoration:dotted underline;">이 현상을 Margin Collapse 이라고 한다. </p>
+                        <br>
+                        <hr>
+                        <h2>CSS Padding</h2>
+                        <h3>&#x2022;패딩 (Padding)</h3>
+                        <p>패딩은 border와 content사이 거리를 뜻한다.</p>
+                        <p>여기서 content는 element에 들어가는 내용, 즉 해당 태그 안에 들어가는 다른 태그나 텍스트를 의미한다.</p> 
+                        <p>설정방법이 margin과 같으므로 예시만 제시하겠다.</p>
+                        <pre>
+padding-bottom:10px;
+padding:20px 30px;
+                        </pre>
+                        <br>
+                        <hr>
+
+                        <h2>CSS Width/Height</h2>
+                        <h3>Height & Width</h3>
+                        <p>말 그대로 element의 세로 길이와 가로길이를 설정하는데 쓰인다.</p>
+                        <p>width로 가로길이를, height로 세로길이를 설정한다.</p>
+                        <p>value는 4가지 값 중 하나를 가질 수 있다.</p>
+                        <ol>
+                            <li>길이: 특정한 길이를 직접 설정 (px, em 등)</li>
+                            <li>%: 그 element가 들어있는 곳에서의 비율로 설정</li>
+                            <li>auto: 가운데 정렬 (가능한 영역 내에서)</li>
+                            <li>inherit: 부모 element와 같은 값을 따라감.</li>
+                        </ol>
+                        <p>단, 여기서 설정하는 가로, 세로길이는 각 element의 content영역이다. (content 영역은 다음 Box Model에서 설명한다.)</p>
+                        <br>
+                        <hr>
+
+                        <h2>CSS Box Model</h2>
+                        <h3>&#x2022;Box Model</h3>
+                        <p>지금까지 margin, padding, border, content(width & height)를 배우며 element들의 기본 배치구조를 파악했다.</p>
+                        <p>이걸 한 번에 그려 쉽게 알아볼 수 있게 그린게 Box Model이다.</p>
+                        <p>그림은 다음과 <span title="cf. padding과 margin은 투명하다. 즉 텍스트가 일반적으로 저 위치에는 올 수 없다." style="text-decoration: dotted underline;">같다.</span></p>
+                        <img src="../imgs/box_model.jpg"alt="box_model"width="100%"><br>
+                        <caption style="text-align:center;"><a href="https://w3schools.com">출처</a></caption>
+                        <p>결론적으로, 한 element의 가로 길이는 Box Model에 따라 width 속성으로 설정해준 content영역의 가로길이와,</p>
+                        <p>border-width로 설정해준 border의 두께,</p>
+                        <p>그리고 margin과 padding을 모두 더해주어야 한다.</p>
+                        <p>특히 padding, border, margin의 경우 상하 또는 좌우 한 쌍 씩 합쳐서 계산해주어야한다.</p>
+                        <br>
+                        <hr>
+
+                        <h2>CSS Outline</h2>
+                        <h3>&#x2022;Outline</h3>
+                        <p>Border 밖을 꾸미기 위해 존재하는 속성이다.</p> 
+                        <p>다른 padding, margin과 달리 다른 element에영향을 주지 않는다.</p> 
+                        <p>즉 다른 element와 겹칠 수 있다.</p>
+                        <p>다음 속성을 사용한다.</p>
+                        <dl>
+                        <dt>1)	outline-style</dt>
+                        <dd>border-style과 같은 value값들을 사용한다.</dd>
+                        <dt>2)	outline-color</dt>
+                        <dd>border-color와 같은 값을 사용한다.</dd>
+                        <dt>3)	outline-width</dt>
+                        <dd>border-width와 같은 값을 사용한다.</dd>
+                        <dt>4)	outline-offset</dt>
+                        <dd>border와의 거리를 설정하는 속성이다.value는 border-width와 동일하다.</dd>
+                        <dt>5)	outline (Shorthand)</dt>
+                        <dd>outline-width, outline-style, outline-color의 Shorthand다. outline-style은 필수로 들어가야 한다. border와 같은 <span title="5px solid red" style="text-decoration: dotted underline;">순서</span>다.</dd>
+                        </dl>
+                        <br>
+                        <hr>
+
+                        </div>
+
+                        <div class="documentitem" id="doc_5">
+                            <p>지난 시간에는 Border, Magin, Padding, Content 네 가지를 배우며 CSS의 기본구조인 Box-Model를 학습할 수 있었다. 
+                                드디어 CSS의 구조가 조금씩 보이기 시작했다. 마치 건물의 설계도를 넘겨받은 느낌이다. 오늘도 여러가지를 학습하면서 이런 느낌을 다시 한번 받아보자</p>
+                            <hr>
+                            <h2>CSS Text</h2>
+                            <h3>&#x2022;텍스트</h3>
+                            <p>텍스트(text)는 CSS에서 매우 큰 비중을 차지한다.</p>
+                            <p>제목이든 내용이든 뭐든 사용자들이 읽는 부분이니 특히 그렇다.</p>
+                            <p>텍스트 디자인이 밋밋하면 사람들이 지루하다고 느끼며 페이지를 방문하지 않고, 폰트가 다른 디자인 요소와 어우러지지 않으면 불쾌감을 느껴 잡(?)사이트라고 생각한다.</p> 
+                            <p>나도 전에 쇼핑하면서 만들어지고 업데이트 되지 않은 쇼핑사이트를 여럿 봤는데, 항상 “에이, 구식이네. 신뢰성이 떨어진다.” 라고 말하며 결제를 주저하고 결국 다른 물건을 보러 떠났다.</p>
+                            <p>그럼 이 텍스트를 어떻게 꾸밀 수 있을까?</p>
+                            <p>크게 여섯 가지 영역이 있다.</p>
+
+                            <ol>
+                            <li>Color: 텍스트의 색을 바꾼다.</li>
+                            <li>Text Alignment: 텍스트의 정렬 방향을 정한다.</li>
+                            <li>Text Decoration: 텍스트에 긋는 선 종류와 여부, 그리고 그 디자인을 결정하는 속성이다.</li>
+                            <li>Text Transform: 대문자 소문자와 관련된 것들을 다루는 속성이다.</li>
+                            <li>Text Spacing: 텍스트 관련 간격에 대한 속성이다.</li>
+                            <li>Text Shadow: 텍스트의 그림자 효과를 줄 때 사용한다.</li>
+                            </ol>
+			                <p>하나씩 알아보자.</p>
+
+                            <h3>&#x2022;Color</h3>
+                            <p>텍스트의 색은 다음 속성으로 정한다.</p>
+                            <pre>“color:(value)”</pre>
+                            <p>앞에서도 말했다시피 background-color나 border-color처럼 앞에 뭐가 붙지 않는다. text-color라고 착각하지 말자.</p>
+                            <p>value는 rgba, hex, hsla로 구체적 값을 설정하거나 predefined 색들을 이용할 수 있다.</p>
+
+                            <h3>&#x2022;Text Alignment</h3>
+                            <p>텍스트의 정렬은 다음 속성들로 정한다.</p>
+                            <dl>
+                            <dt>1)“text-align:(value)” : 텍스트의 정렬 방향을 정한다.</dt>
+                            <dd>value로는 center, right, left, justify가 들어갈 수 있다.</dd>
+                            <dd>justify는 워드에서 <span title="한 줄 한 줄의 길이가 동일하도록 맞춤" style="text-decoration: dotted underline;">‘양쪽 맞춤’</span>에 해당하는 기능이다.</dd>
+                            <br>
+                            <dt>2)“text-align-last:(value)” : 텍스트 ‘마지막 줄’의 정렬 방향을 정한다.</dt>
+                            <dd>value는 1)의 value에 들어갈 수 있는 값들과 동일하다.</dd>
+                            <br>
+                            <dt>3)“direction”:(value)” + “unicode-bidi:bidi-override” : 텍스트의 작성 방향을 정한다.</dt>
+                            <dd>가끔 문장을 작성하고 역순으로 글자를 배열하고 싶을 때가 있다. 이때 사용한다.</dd>
+                            <dd>direction의 value에 들어갈 수 있는 값은 rtl(right to left), ltr(left to right)가 있다. unicode-bidi:bidi-override는 고정이다.</dd>
+                            <br>
+                            <dt>4)	“vertical-align:(value)” : 텍스트 내부에서 작성위치를 결정한다.</dt>
+                            <dd>무슨말인지 쉽게 설명하면, 위첨자, 아래첨자와 같은 기능을 설정하는 속성이라고 보면 된다.</dd>
+                            <dd>value는 baseline(디폴트), text-top, text-bottom, sub, super 네 가지 값이 들어갈 수 있다.</dd>
+                            <dd>각각 기본값, 텍스트 위, 텍스트 아래, 아래첨자, 위첨자를 의미한다. </dd>
+                            <dd>근데 실질적으로 텍스트 위=위첨자 같고 텍스트 아래= 아래첨자 같다. 아마 글자와 이미지의 
+                                <span title="글자는 value가 super, sub일 때를 제외하고는 아무런 효과가 없다. 즉 글자에 text-top하는건 의미가 없다." 
+                                style="text-decoration:dotted underline;">차이</span> 때문에 나눈 것 같다.</dd>
+                            <br>
+                            </dl>
+
+                            <h3>&#x2022;Text Decoration</h3>
+                            <p>텍스트에 어떤 줄을 넣을지, 그 색은 어떻게 할지 등 줄에 관한 속성이다. 다음 다섯가지로 정한다.</p>
+                            <dl>
+                            <dt>1)	“text-decoration-line: (value)”: 어떤 줄을 넣을지 결정하는 속성</dt>
+                            <dd>다음과 같은 value를 가질 수 있다.</dd>
+                            <dd>(1)	overline: 윗줄</dd>
+                            <dd>(2)	underline: 밑줄</dd>
+                            <dd>(3)	line-through: 취소선</dd>
+                            <dd>(4)	overline underline: 윗줄 + 밑줄 동시</dd>
+                            <br>
+                            <dt>2)	“text-decoration-color:(value)” 1)로 결정한 줄의 색을 정하는 속성</dt>
+                            <dd>value로 들어갈 수 있는 값은 여타 color 속성들과 같다.</dd>
+                            <br>
+                            <dt>3)	“text-decoration-style:(value)” 1)로 결정한 줄의 스타일 종류를 정하는 속성</dt>
+                            <dd>value로 들어갈 수 있는 값은 border-style과 같다. 단, 물결표시를 주는 ‘wavy’가 추가되었다.</dd>
+                            <br>
+                            <dt>4)	“text-decoration-thickness:(value)”: 줄의 두께를 결정하는 속성</dt>
+                            <dd>말 그대로다. border-width와 같은 값을 가질 수 있다.</dd>
+                            <br>
+                            <dt>5)	“text-decoration:(value1) (value2) (value3) (value4)”: 앞서 배운 네가지의 Shorthand다.</dt>
+                            <dd>value의 순서는 1), 2), 3), 4) 이다. 다만 1)은 필수고 나머지는 선택적으로 넣을 수도 있고 넣지 않을 수도 있다.</dd>
+                            </dl>
+
+                            <h3>&#x2022;Text Transformation</h3>
+                            <p>대문자, 소문자 관련된 속성이다. 다음 속성을 쓴다.</p>
+                            <pre>
+“text-transform:(value)” 
+                            </pre>
+                            <p>>value 값으로는 uppercase, lowercase, capitalize가 있다.</p>
+                            <p>uppercase는 모든 글자를 대문자로, lowercase는 모든 글자를 소문자로 만든다.</p>
+                            <p>capitalize 는 각 단어의 첫글자만 대문자로 만든다.</p>
+                            <br>
+
+                            <h3>&#x2022;Text Spacing</h3>
+                            <p>간격에 대한 기능이다. 다음 속성을 쓴다.</p>
+                            <dl>
+                                <dt>1)”text-indent:(value)”</dt>
+                                    <dd>텍스트 첫 줄에 들여쓰기를 하기 위해 넣는다. 들여쓰기 크기를 정할 수 있다. value는 border-width와 같은 값이 들어간다.</dd>
+                                    <br>
+                                <dt>2)”letter-spacing:(value)”</dt>
+                                    <dd>글자간 띄어쓰기 간격을 설정하기 위해 넣는다. value에 들어갈 수 있는 값은 1)과 같다. word-spacing과 헷갈리지 말자.</dd>
+                                    <br>
+                                <dt>3)”line-height:(value)”</dt>
+                                    <dd>줄 간격을 설정하기 위해 넣는다. value에 들어갈 수 있는 값은 1)과 같을 수도 있고, %를 설정할 수도 있다. 보통 브라우저 기본값은 110%~120%이다.</dd>
+                                    <br>
+                                <dt>4)”word-spacing:(value)”</dt>
+                                    <dd>단어간 띄어쓰기 간격을 설정하기 위해 넣는다. value에 들어갈 수 있는 값은 1)과 같다. letter-spacing과 헷갈리지 말자.</dd>
+                                    <br>
+                                <dt>5)”white-space:(value)”</dt>
+                                    <dd>긴 글이 한 문단에 들어가 있을 때 스크린 사이즈에 맞게 자동 줄바꿈이 되게 하지 말지 결정하는 속성이다.</dd>
+                                    <dd>value로는 wrap, nowrap이 들어갈 수 있다. nowrap으로 할 경우 아래 스크롤바가 생기며 좌우로 움직일 수 있다.</dd>
+                                    <dd>wrap으로 할 경우 생기지 않고 한 화면에서 다 볼 수 있다.</dd>
+                                    <br>
+                            </dl>
+
+                            <h3>&#x2022;Text Shadow</h3>
+                            <p>텍스트에 그림자를 넣는 기능이다. 다음 속성으로 사용한다.</p>
+                            <pre>
+“text-shadow:(value1) (value2) (value3) (value4)”
+                            </pre>
+                            <p>value1에 들어가는 값은 수평 방향 위치다. 0은 현재 글자 위치이고, 양수일 경우 오른쪽 음수일 경우 왼쪽으로 움직인다.</p>
+                            <p>value2에 들어가는 값은 수직 방향 위치다. 0은 현재 글자 위치이고, 양수일 경우 아래쪽 음수일 경우 위쪽으로 움직인다.</p>
+                            <p>참고로 value1, value2의 숫자에 따른 방향은 background-position과 같다.</p>
+                            <p>value3에 들어가는 값은 blur효과 양이다. 알아서 적당히 정하자.</p>
+                            <p>value4에 들어가는 값은 색이다. 색상표기법을 이용하거나 predefined 색들을 이용하면 된다.</p>
+                            <br>
+                            <hr>
+
+                            <h2>CSS Fonts</h2>
+                            <h3>&#x2022;폰트</h3>
+                            <p>폰트도 텍스트와 마찬가지로 매우 큰 역할을 한다.</p>
+                            <p>예를 들어, 리그오브레전드 홈페이지 글이 궁서체로 써있다고 해보자. 만우절도 아니고 분위기가 맞을까? 그렇지 않다.</p>
+                            <p>분위기에 맞는 폰트를 결정하는게 매우 중요하다.</p>
+                            <p>폰트에 관련된 설정들을 배우면서 어떻게 해야 분위기에 맞는 폰트를 설정할 수 있는지 배워보자.</p>
+                            <p>다음 5가지 속성이 있다.</p>
+                            <dl>
+                            <dt>1)“font-family:(value)”</dt>
+                            <dd>어떤 폰트를 사용할지 설정하는 속성이다. 한 가지 속성만이 아니라, 대체 속성을 정할 수도 있다. 앞에 올수록 우선 순위가 높다. 앞에 있는게 안될 경우에만 뒤에 것이 사용된다.</dd>
+                            <dd>value 값으로 들어갈 수 있는 font는 수없이 많다. sans-serif, serif, Times Roman 등등 이미 포함되어 있는 폰트들도 있고, Google Font API에서 1000개가 넘는 폰트들 중 하나를 골라 사용할 수도 있다. </dd>
+                            <dd>Google Font API는 차후 설명하겠다.</dd>
+                            <br>
+                            <dt>2)	“font-style:(value)”</dt>
+                            <dd>해당 폰트가 어떤 스타일로 사용될지 결정하는 속성이다. </dd>
+                            <dd>value로는 normal, italic, oblique가 있다. normal은 디폴트고, italic과 oblique는 다 italic으로 써진다. (italic과 oblique의 차이가 없어 보인다.)</dd>
+                            <br>
+                            <dt>3)	“font-weight:(value)</dt>
+                            <dd>해당 폰트의 무게감, 즉 볼드처리를 어떻게 할지 결정하는 속성이다.</dd>
+                            <dd>value로는 normal, lighter, bold가 들어갈 수 있다. normal은 디폴트 값이고 lighter은 좀 더 얇게 bold는 두껍게 들어간다. </dd>
+                            <dd>숫자도 들어갈 수 있는데, 351~549가 normal 값이다. 그 이하는 lighter로 들어가고 그 이상은 bold로 들어간다. 다만 1000을 초과할 경우 normal 값으로 들어간다.</dd>
+                            <br>
+                            <dt>4)	“font-variant:(value)”</dt>
+                            <dd>해당 글의 소문자가 대문자화 될지 말지 결정하는 속성이다. text-transform:uppercase와의 차이는, font-variant:small-caps는 원래 대문자는 두껍게, 소문자였던건 얇게 표시된다. </dd>
+                            <dd>앞에 쓴 것 처럼 value는 normal(디폴트), small-caps가 있다.</dd>
+                            <br>
+                            <dt>5)	“font-size:(value)”</dt>
+                            <dd>해당 글의 글자 크기를 결정하는 속성이다. 단, 이미 &lt;h1&gt; 같이 제목 태그가 있음에도 <p>태그의 글자크기를 조정해서 제목으로 쓰는 것은 좋은 방법이 아니라는 것을 명심하자.</dd>
+                            <dd>value로는 px, em, vw등이 들어갈 수 있다.</dd>
+                            <br>
+                            <dt>6)	“font:(value1) (value2) (value3) (value4) (value5)”</dt>
+                            <dd>Shorthand다. 순서는 다음과 같다.</dd>
+                            <dd>value1: style</dd>
+                            <dd>value2: variant</dd>
+                            <dd>value3: weight</dd>
+                            <dd>value4: size</dd>
+                            <dd>value5: family</dd>
+                            <dd>단, size와 family는 필수로 들어가야 하는 값이다. 어느 하나라도 들어가지 않으면 디폴트 값이 들어간다.</dd>
+                            <br>
+                            </dl>
+
+                            <h3>Font Google</h3>
+                            <p>Google Font API에서 폰트를 가져올 수도 있다. 다음 방식으로 가져온다.</p>
+                            <pre>
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=(폰트이름)"&gt;
+                            </pre>
+                            <p>구글에 Google Font API라 치고 사용하고 싶은 폰트이름만 그대로 적어주면 font-family에 넣어 사용할 수 있다.</p>
+                            <p>여러 개를 넣고 싶은 경우, 폰트이름간 ‘|’ 를 넣어주자. 여러 이펙트도 넣을 수 있는데, 그 경우 (폰트이름)&effect=(이펙트이름) 으로 넣어주면 된다.</p>
+                            <p>폰트 종류와 이펙트는 구글에서 직접 찾아보자.</p>
+                        </div>
+
+                        <div class="documentitem" id="doc_6">
+                            <p>
+                                이번에는 리스트와 테이블처럼 데이터를 나열하는 element들을 어떻게 꾸밀 수 있는지 배울 계획이다. 
+                                어떻게 쓰일지 모르겠지만 당장 이렇게 일지를 쓰는데도 리스트가 쓰이므로 확실히 알아두자. 
+                                Icon과 Link는 건너뛰고 나중에 써야 할 때 보는 것도 괜찮을 것 같아서 건너 뛰었다.
+                            </p>
+                            <hr>
+                            <h2>CSS List</h2>
+                            <h3>&#x2022;리스트</h3>
+                            <p>앞서 HTML에서 배웠다시피, 리스트에는 총 3가지가 있다. </p>
+                            <ol>
+                            <li>Unordered List: 순서가 없는 리스트</li>
+                            <li>Ordered List: 순서가 있는 리스트</li>
+                            <li>Description List: 설명을 추가하는 리스트</li>
+                            </ol>
+                            <p>이중 1., 2.가 주로 사용되는 리스트로 이것들의 <span title="문장 앞에 오는 기호, 로마자 I, II, III 등" style="text-decoration:dotted underline">마커</span>가 올지 설정하거나 그것들의 위치를 조정할 수 있게 만든다.</p>
+                            <p>하나씩 알아보자.</p>
+
+                            <dl>
+                            <dt>&#x2022;"list-style-type"</dt>
+                            <dd>어떤 리스트 마커(기호)를 사용할지 결정하는 속성이다. 다음과 같이 사용한다.</dd>
+                            <dd>"list-style-type:(value)"</dd>
+                            <dd>value에 들어갈 수 있는 값은 circle, square, upper-roman, lower-roman, upper-alpha, lower-alpha, none이 있다.</dd>
+                            <dd>각각 원, 정사각형, 로마자 대문자, 로마자 소문자, 알파벳 대문자, 알파벳 소문자, 스타일 없음을 나타낸다.</dd>
+                            <dd>원과 정사각형 같은 도형은 Unordered list에 사용되고 none을 제외한 나머지는 Orderded List에 사용된다. none은 마커를 없앨 때 사용한다.</dd>
+                            <br>
+
+                            <dt>&#x2022;"list-style-image"</dt>
+                            <dd>이미지를 리스트 마커로 사용할 수 있는 기능이다. 다음과 같이 사용한다.</dd>
+                            <dd>"list-style-image:url(“파일경로”)"</dd>
+                            <dd>파일경로는 앞서 배운 것과 같으므로 생략한다. 파일은PNG, JPEG, GIF모두 가능하다.</dd>
+                            <br>
+
+                            <dt>&#x2022;"list-stylle-position"</dt>
+                            <dd>리스트 마커의 위치를 정할 수 있는 설정이다. 다음과 같이 사용한다.</dd>
+                            <dd>“list-style-position:(value)”</dd>
+                            <dd>value에 들어갈 수 있는 값은 outside, inside두가지다. outside의 경우 지금 이 일지에 쓰인 것처럼 마커가 있으면 줄이 넘어갈 때 마커가 있는 위치까지 글이 넘어가지 않는다. inside의 경우 넘어간다. </dd>
+                            <br>
+
+                            <dt>&#x2022;"list-style"</dt>
+                            <dd>앞서 배운 것들의 Shorthand이다. 다음과 같이 사용한다.</dd>
+                            <dd>“list-style: (value1) (value2) (value3)”</dd>
+                            <dd>value1: list-style-type</dd>
+                            <dd>value2: list-style-position</dd>
+                            <dd>value3: list-style-image</dd>
+                            <dd>만약 어느 하나가 비어있으면, 그 값은 기본 값으로 적용된다.</dd>
+                            </dl>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Table</h2>
+                            <p>테이블 만드는데 주로 쓰이는 엑셀을 살펴보면 셀을 선택할 시 색이 짙어진다.</p>
+                            <p>또, 해당 셀 영역의 배경 색을 여러가지 설정할 수 있다. 이런 기능을 가지고 있는 것이 CSS Table이다.</p>
+                            <p>하나씩 알아보자.</p>
+                            <br>
+
+                            <h3>&#x2022;Border</h3>
+                            <p>테이블 테두리를 변경하는 기능이다. 자세히 살펴보면 테이블 전체를 감싸는 테두리 하나와 각 데이터(셀)을 감싸는 테두리 여러 개로 이루어져 있는 것을 볼 수 있다.</p>
+                            <p>이것들 모두 ‘border’가 적용된 상태다.</p>
+                            <p>즉 &lt;table&gt;, &lt;th&gt;, &lt;td&gt;,&lt;tr&gt; 모두 테두리 적용이 가능한데, 이 중 &lt;th&gt;, &lt;td&gt;,&lt;table&gt;의 border가 설정되어 있다고 할 수 있다.</p>
+                            <p>이것도 결국은 border이므로 각각의 border를 border 속성으로 결정할 수 있다.</p>
+                            <p>border와 같은 내용이므로 생략한다.</p>
+                            <br>
+
+                            <h3>&#x2022;Full-Width Table</h3>
+                            <p>테이블이 가로 화면 전체를 꽉 채우고 싶은 경우가 있다. 이때 사용할 수 있는 속성이 width이다.</p>
+                            <p>다음과 같이 설정하면 가로 화면 전체를 채우도록 할 수 있다.</p>
+                            <pre>
+
+table {
+width:100%
+}
+                            </pre>
+                            <br>
+
+                            <h3>Border Collapse</h3>
+                            <p>앞에서 말했다시피 디폴트 값으로 &lt;table&gt;, &lt;th&gt;, &lt;td&gt;각각에 테두리가 설정되어 있다.</p>
+                            <p>우리가 엑셀을 쓰며 보는 표와는 거리가 좀 있어 엑셀처럼 테두리 하나로 설정할 수는 없는지 고민될 때가 있다.</p> 
+                            <p>&lt;table&gt;에만 border를 설정하면 되나? 그러면 가장 바깥 테두리만 사라진다. 그렇다고 &lt;th&gt;, &lt;td&gt;만 없게 설정하면 해당 영역 테두리만 사라진다.</p> 
+                            <p>그러면 어떻게 해야 할까? 다음 속성을 사용하면 된다.</p>
+                            <pre>
+“border-collapse:collapse”
+                            </pre>
+                            <p>이러면 엑셀처럼 나타난다.</p>
+                            <br>
+
+                            <h3>&#x2022;Table Size</h3>
+                            <p>원하는 항목을 width & height로 설정하면 된다. 이미 width & height에서 설명했으므로 생략한다.</p>
+                            <br>
+
+                            <h3>&#x2022;Table Alignment</h3>
+                            <p>엑셀에 보면 ‘가운데로 정렬’ 라고 써져 있는 꽤 자주 쓰는 버튼이 있다. 이 기능을 구현할 수는 없을까? 당연히 가능하다. 게다가 이미 배웠다.</p>
+                            <p>text-align과 vertical-align기능이다. 이 기능들로 각 값들을 수월하게 정렬할 수 있다. 이 두가지 속성도 이미 앞에서 배웠으므로 생략한다.</p>
+                            <br>
+
+                            <h3>&#x2022;Table Style</h3>
+                            <p>이건 솔직히 알아서 하는 거다. 헤더의 색만 다르게 만들고 싶다면 &lt;th&gt;만 background 속성으로 설정하면 된다.</p>
+                            <p>아래쪽 border 만 남기고 싶다면 border-bottom을 설정하면 된다. 알아서 하자.</p>
+                            <br>
+
+                            <h3>&#x2022;Table Overflow</h3>
+                            <p>데이터가 너무 많아서 한 화면에 다 나타낼 수 없는 경우가 있다.</p>
+                            <p>이 경우 overflow를 이용해주면 된다. 차후 overflow 단원에서 설명하겠다.</p>
+                            <br>
+                                
+                        </div>
+
+                        <div class="documentitem" id="doc_7">
+                            <p>드디어 layout과 관련된 속성들을 배운다. 지금까지 연습한다고 여러 웹페이지들을 만들어봤지만 내가 인터넷에서 보는 그런 웹사이트 레이아웃이 나오질 않아서 여러모로 아쉬웠다. 
+                                이번에 학습하고 나면 완벽하진 않더라도 그런 웹사이트를 따라 만들 수 있지 않을까 생각한다.</p>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Display</h2>
+                            <p>대부분 element는 inline 또는 block 중 하나의 display 값을 가진다.</p>
+                            <p>block은 사용하면 줄이 자동으로 한 칸 띄어진다. 반면 inline은 줄이 띄어지지 않고 텍스트처럼 작용한다.</p>
+                            <p>예를 들어 흔히 쓰는 &lt;div&gt;는 block element이며 &lt;span&gt;은 inline element이다.</p> 
+                            <p>그런데 가끔 &lt;div&gt;를 inline element처럼 쓰거나 &lt;span&gt;을 block element로 바꿔 쓰고 싶은 경우가 있다.</p> 
+                            <p>이걸 바꿀 수 있도록 만든 속성이 display다.</p>
+                            <p>다음과 같이 사용한다.</p>
+                            <pre>
+“display:(value)”
+                            </pre>
+                            <p>
+                                value에는 매우 많은 값이 들어갈 수 있다.<br>
+                                주로 쓰이는 건 다음 다섯 가지다.<br>
+                                <ol>
+                                <li>block: block element처럼 바꿔준다.</li>
+                                <li>inline: inline element 처럼 바꿔준다.</li>
+                                <li>inline-block: inline인데, width와 height설정이 가능하게 만들어 준다.</li>
+                                <li>none: <span title="없애지 않고 숨기고 싶으면, visibility:hidden을 써주면 된다. 다시 보이게 하고 싶으면 visibility:visible을 해주면 된다." style="text-decoration:dotted underline;">없는</span> element로 만들어 준다.</li>
+                                <li>flex: flex container를 만든다.</li>
+                                </ol>
+                            </p>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Max Width</h2>
+                            <p>앞서 배웠다시피 width는 element의 가로길이를 설정하는 기능이다.</p>
+                            <p>예를 들어 width:500px로 해주면 스크린 사이즈가 어떻든 width가 500px로 고정된다.</p>
+                            <p>여기서 ‘스크린 사이즈가 어떻든’ 이 문제가 된다.</p>
+                            <p>스크린 사이즈가 500px 보다 작은 기기에서는 일부 컨텐츠가 화면에 표시 되지 않는 문제가 발생할 수도 있다.</p>
+                            <p>이 때 사용하는 것이 max-width이다. 다음과 같이 사용한다.</p>
+                            <pre>
+“max-width:value”
+                            </pre>
+                            <p>value에 들어갈 수 있는 값은 width와 같다. 다만 그 기능이 다르다. </p>
+                            <p>width는 그 길이를 고정시킨다면 max-width는 가로길이의 최댓값을 설정한다.</p>
+                            <p>스크린 사이즈가 그것보다 작으면 그것에 맞춰진다.</p>
+                            <p>즉 화면이 500px보다 크면 그 가로 길이를 500px로 한정하고, 반대로 500px보다 작으면 그 가로길이를 화면 사이즈에 맞게 조정한다.</p>
+                            <p>여러모로 width보다 더 자주 쓰여야 하는 속성이다.</p>
+                            <p>참고로 min-width도 있다. min-width는 최소길이를 설정하는데 쓰인다.</p>
+                            <hr>
+                            <br>
+                            
+                            <h2>CSS Position</h2>
+                            <p>위치를 유동적으로 변화시키고 싶은 경우가 있다.</p>
+                            <p>예를 들어 “이 element는 이 element보다 항상 5px 위에 위치했으면 좋겠어”</p>
+                            <p>라고 하는 경우 쓸 수 있는 속성이 position이다. position에는 5가지 value가 있다. 하나씩 알아보자.</p>
+                            <dl>
+                            <dt>position:static</dt>
+                            <dd>기본값이다. 항상 빈 공간 가장 왼쪽 위에 배치된다.	</dd>
+                            <br>
+                            <dt>position:relative</dt>
+                            <dd>이게 원래 있어야 하는 위치 (즉, position:static을 사용한 경우 존재하는 위치)로부터 얼마나 떨어져 있는지로 설정한다.</dd>
+                            <dd>예를 들어 position:relative로 설정한 뒤 right:5px, top:10px라고 한다면 위에서 10px, 우측에서 5px 떨어진 곳에 해당 element가 위치하게 된다.</dd>
+                            <br>
+                            <dt>position: fixed</dt>
+                            <dd>페이지를 스크롤 해도 항상 일정 위치에 붙어있게 만들고 싶을 때 사용한다. html에서 이 element가 위치한 곳은 빈칸으로 남아있지 않고 그냥 없는 것처럼 작용한다. 즉, 일반적인 흐름에서 벗어나게 된다.</dd>
+                            <br>
+                            <dt>position: absolute</dt>
+                            <dd>부모 element중 position된 것이 있다면 그것이 viewport(웹사이트창) 인 것 마냥 배치된다. </dd>
+                            <dd>즉 top, right 등을 설정하면 웹사이트창 기준이 아니라, 그 부모 element의 content영역이 viewport라고 여기고 배치된다.</dd>
+                            <br>
+                            <dt>position:sticky</dt>
+                            <dd>보일 때는 고정되어 있지 않다가, 스크롤 하고 나서 보이지 않게 되기 직전에 화면에 붙어서 계속 보이게 만드는 <span title="w3schools에선 스크롤에 따라 relative와 fixed가 지속적으로 바뀌게 하는 속성이라고 설명한다." style="text-decoration:dotted underline;">기능</span>이다. </dd>
+                            <dd>w3schools도 튜토리얼에 들어가보면 상단 내비게이션 바는 고정되고 그 아래 컨텐트만 움직이는 걸 볼 수 있는데 이게 sticky이다.</dd>
+                            </dl>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Z-index</h2>
+                            <p>앞서 배운 position 이 사용된 경우 z-index를 사용하여 element끼리 겹치게 만들 수 있다. 다음과 같이 사용한다.</p>
+                            <pre>
+“z-index:(value)”
+                            </pre>
+                            <p>value에는 정수가 들어갈 수 있는데 숫자가 클수록 상위에 배치된다.</p>
+                            <p>만약 z-index가 없다면 차곡차곡 쌓는 느낌으로 마지막에 오는 element가 가장 상위에 배치된다.</p>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Overflow</h2>
+                            <p>일정 영역안에 글을 써야 하는데 그 영역이 너무 작아 글을 다 썼더니 그 영역을 초과하는 경우가 있다.</p>
+                            <p>이 때 초과하는 부분을 어떻게 처리할지 결정하는 속성이 overflow다.</p>
+                            <p>주의할 점은, height가 설정되어 있는 것만 overflow를 설정할 수 <span title="사실 당연하다. 설정 안하면 애초에 초과 할리가 없다.">있다.</span></p>
+                            <p>다음과 같이 사용한다.</p>
+                            <pre>
+“overflow:value”
+                            </pre>
+                            <pre>value에는 다음 네가지 값이 들어갈 수 있다.</pre>
+                            <dl>
+                            <dt>1)	visible</dt>
+                            <dd>기본 값이다. 초과한 부분이 초과된 그대로 보인다.</dd>
+                            <br>
+                            <dt>2)	hidden</dt>
+                            <dd>숨긴다. 초과된 부분이 보이지 않게 만든다.</dd>
+                            <br>
+                            <dt>3)	scroll</dt>
+                            <dd>해당 영역에 스크롤 바를 만들어 초과된 부분이 스크롤을 해야만 보이도록 만든다.</dd>
+                            <br>
+                            <dt>4)	auto </dt>
+                            <dd>필요한 경우에만, 즉 글이 영역을 초과할 때만 scroll이 생기도록 설정하는 기능이다. </dd>
+	                        <dd>스크롤 바를 좌우로 하고 싶으면 overflow 대신 overflow-x를, 상하로 하고 싶으면 overflow-y로 설정한다. 디폴트는 둘 다 설정되어 있는 상태다.</dd>
+                            </dl>
+                            <hr>
+                            <br>
+                        </div>
+
+                        <div class="documentitem" id="doc_8">
+                            <p>
+                                    지난 시간에는 overflow와 display, position을 배우며 레이아웃 설정하는 방법을 대략적으로 배웠다. 
+                                    오늘은 Float, Inline-block을 통해 element를 더 쉽게 배치하는 방법을 배울 것이고, selector의 종류를 학습하며 원하는 element를 자유롭게 꾸밀 수 있게 될 것이다.
+                            </p>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Float</h2>
+                            <p>말 그대로 어디에 띄울지 결정하는 기능이다. position으로 위치를 정하기는 번거로운 부분이 있기에 꽤 자주 쓰인다.</p>
+                            <p>예를 들어 한 element안에 들어있는 이미지를 배치할 때 position을 쓴다고 해보자.</p>
+                            <p>그러면 부모 element는 positon:relative를 통해 위치를 정해주어야 하고 다시 그 이미지에 position:absolute를 2차로 적용해줘야 한다.</p>
+                            <p>게다가 z-index를 설정했을 경우 겹치지 않으려면 같은 영역 안에 있는 다른 element도 z-index 및 position을 설정해 주어야 하기에 번거로움이 이만저만이 아니다.</p>
+                            <p>이럴때 float를 적용해주면 편하다.</p>
+                            <p>다음과 같이 쓴다.</p>
+                            <pre>
+“float:(value)”
+                            </pre>
+                            <p>여기서 value에는 자기가 배치하고 싶은 방향을 넣어주면 된다.</p>
+                            <p>예를 들어 왼쪽에 부모element로부터 10px 띄워서 배치하고 싶으면 float:left; margin:10px를 설정해 주면 된다.</p>
+                            <p>참고로, float:none은 자기 원래 위치에 배치된다.</p>
+                            <br>
+                            <p>문제는 그 컨테이너 밖에 다른 element를 배치할 때 발생한다.</p>
+                            <p>float:left를 설정한 후 그대로 다음 element를 넣으면 다음 줄에 배치되지 않고 겹치는 경우가 발생한다.</p>
+                            <p>이때 써야 하는 속성이 clear이다. 다음과 같이 쓴다.</p>
+                            <pre>
+.class1 {
+float:left;
+}
+.class2 {
+clear:left;
+}
+                            </pre>
+                            <p>여기서 clear의 의미는 ‘ “float:left”가 적용된 element 뒤에 배치되게 하라’ 겠다. </p>
+                            <p>clear가 가질 수 있는 value는 다음과 같다.</p>
+
+                            <ol>
+                            <li><b>left:</b> float:left가 적용된 것 다음에 배치되도록 하라</li>
+                            <li><b>right:</b> float:right가 적용된 것 다음에 배치되도록 하라</li>
+                            <li><b>both:</b> float:left 또는 float:right가 적용된 것 다음에 배치되도록 하라</li>
+                            <li><b>none:</b> 기본값(없음)</li>
+                            <li><b>inherit:</b> 부모 element의 같은 속성을 따라가라</li>
+                            </ol>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Inline Block</h2>
+                            <p>Inline과 Block은 각각의 특징이 있다.</p>
+                            <p>inline은 줄바꿈이 되지 않고 width, height를 사용할 수 <span title="가능은 한데 소용이 없다."style="text-decoration:dotted underline">없다.</span></p>
+                            <p>block의 경우 전 후가 띄워지며 width, height가 적용된다.</p>
+                            <p>이 두가지 특징을 적절히 섞어 놓은 것이 inline-block이다.</p>
+                            <p>줄이 띄워지지 않고 Box Model 설정은 inline처럼 되지만 block처럼 height와 width 설정이 가능하다.</p> 
+                            <p>다음처럼 사용한다.</p>
+                            <pre>
+“display:inline-block”
+                            </pre>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Combinator</h2>
+                            <p>우리는 지금까지 html의 어떤 element를 선정할 때 class와 id를 많이 사용했고 가끔은 태그 이름을 쓰는 경우도 있었다.</p>
+                            <p>하지만 이런 selector만으로는 html을 원활히 만들기 어렵다.</p>
+                            <p>예를 들어 class가 A인 부모 element의 자손 element 중 &lt;p&gt;만 바꾸고 싶은 경우는 어떻게 해야 할까?</p>
+                            <p>지금까지 배운 것으로는 쉽지 않다.</p>
+                            <p>이 때 쓸 수 있는 것이 여러 combinator다. </p>
+                            <p>combinator에는 다음 종류들이 있다.</p>
+                            <dl>
+                            <dt>1)	(space): 특정 element의 특정 자손(descendent)을 특정할 때</dt>
+                            <dd>예: div p => div안에 들어있는 p만 특정</dd>
+                            <br>
+                            <dt>2)	>: 특정 element의 특정 자식(child)을 특정할 때</dt>
+                            <dd>예: div>p => div안에 들어있는 p 중, 다른 element가 추가로 감싸고 있지 않은 p만 특정. 예를 들어 div안에 section이, section안에 p 가 들어있다면 그 p는 해당되지 않는다.</dd>
+                            <br>
+                            <dt>3)	+: 특정 element 바로 뒤에 나오는 element를 특정할 때</dt>
+                            <dd>예: div + p => div바로 뒤에 나오는 p만 해당. 다만 뒤에 나온다는게 child element로서 뒤에 있다는 의미가 아니다. </dd>
+                            <br>
+                            <dt>4)	~ 어떤 element 뒤에 있는 특정 element 전체를 고를 때</dt>
+                            <dd>예: div ~ p => div 뒤에 나오는 p 전부</dd>
+                            <br>
+                        </dl>
+                        <hr>
+                        <br>
+
+                            <h2>CSS Pseudo Class</h2>
+                            <p>Pseudo-Class는 특정한 상태에 있는 element를 선택할 때 사용한다. 다음 종류가 있다.</p>
+                            <ol>
+                            <li>a:link : a 태그 중, 아직 방문하지 않은 것</li>
+                            <li>a:visited : a 태그 중, 방문했던 것</li>
+                            <li>a:hover: 마우스가 위에 올려져 있는 것</li>
+                            <li>a:active: 현재 선택된 것</li>
+                            <li>div:first-child: div 중 첫번째 child element</li>
+                            <li>div:last-child: div 중 마지막 child element</li>
+                            <li>div:empty: div 중 어떤 child도 없는 것</li>
+                            <li>div:not(p): div 중 p를 제외한 전부</li>
+                            <li>div:nth-child(2): div 중 두번째 child element. 여기서 2를 다른 숫자로 바꾸어 n번재 child element를 설정할 수 있다.</li>
+                            <li>p:only-child: 외동인 p만 고를 때</li> 
+                            </ol>
+                            <p>그 외에도 여러가지가 있다. 가장 많이 쓰일 것 같은 10가지만 적어 놓았고 종종 들어가서 학습하자.</p>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Pseudo Element</h2>
+                            <p>Pseudo-Class는 조건에 맞는 element를 좀 더 원활히 고를 수 있게 만들었다면 Pseudo-Element는 그 element 중 일정 내용을 고르는데에 원활함을 더해준다.</p>
+                            <p>예를 들어 element::first-line은 element에 들어있는 텍스트 중 첫 줄을 꾸미는데 유용하다.</p>
+                            <p>다음의 종류가 있다.</p>
+                            <ol>
+                            <li>p::first-line : p의 <span title="first-line은 block element에만 적용된다. 
+                                또, 텍스트에 적용되다보니 사용할 수 없는 속성도 있다. 상식적으로 텍스트에 들어갈 수 있는 것만 적용된다. 
+                                (배경, 폰트 사이즈, 폰트 스타일, 글자 색, 정렬 등)" style="text-decoration:dotted underline">첫번째 줄</span></li>
+                            <li>p::first-letter : p의 첫글자</li>
+                            <li>p::before : p이전에 내용 추가</li>
+                            <p>다음과 같이 쓴다.</p>
+                            <pre>
+p::before {
+content:url(“IamAwesome.gif”);
+content:”IAmStrong”;
+}
+                            </pre>
+                            <li>p::after: p이후에 내용 추가. 나머진 before와 같다.</li>
+                            <li>ul::marker : 리스트 마커 선택</li>
+                            <li>p::selection: p element 중 유저가 선택한 것. 그것의 배경과 색을 정할 수 있다. 예를 들어 워드글을 선택하면 글 색은 그대로고 회색 배경이 생기는데 이런 걸 설정 할 수있다. </li>
+                            </ol>
+                            <hr>
+                            <br>
+                            <h2>CSS Attribute Selector</h2>
+                            <p>이번에는 어떤 Attribute를 가지고 있는 element만을 선택할 수 있는 selector 작성 방법에 배우려 한다.</p>
+                            <p>기본적으로 다음과 같이 사용한다.</p>
+                            <pre>
+“tag[Attribute]”
+                            </pre>
+                            <p>만약 특정한 value가 있는 경우, 다음 여러 방식으로 사용할 수 있다.</p>
+                            <dl>
+                            <dt>1)	“tag[Attribute=”value”]</dt>
+                            <dd>특정한 value가진 Attribute를 포함하고 있는 태그를 선택</dd>
+                            <br>
+                            <dt>2)	“tag[Attribute~=”word”]</dt>
+                            <dd>실제 tag의 해당 Attribute의 value에 word가 들어가 있으면, 그걸 선택한다. (단, -를 통한 연결을 불가능하다. 오직 띄어쓰기를 통해 나눠진 것 중, word에 해당하는게 있으면 그걸 가져온다.)</dd>
+                            <br>
+                            <dt>3)	“tag[Attribute|=”word”]</dt>
+                            <dd>실제 tag의 해당 Attribute의 value에 word가 들어가 있으면, 그걸 선택한다. 이건 -를 허용한다. 즉 word가 car이면, white-car도 선택된다.</dd>
+                            <br>
+                            <dt>4)	“tag[Attribute^=”word”]</dt>
+                            <dd>실제 tag의 해당 Attribute의 value가 word로 시작하면, 그걸 선택한다.</dd>
+                            <br>
+                            <dt>5)	 “tag[Attribute$=”word”]</dt>
+                            <dd>실제 tag의 해당 Attribute의 value가 word로 끝나면, 그걸 선택한다.</dd>
+                            <br>
+                            <dt>6)	“tag[Attribute*=”word”]</dt>
+                            <dd>word를 포함하는 value를 가진 Attribute를 포함하는 element가 선택된다.</dd>
+                            <br>
+                            </dl>
+                            <hr>
+
+                            <h2>CSS Opacity</h2>
+                            <p>element의 불투명성을 정하는 속성이다.</p>
+                            <p>즉 opacity 값이 1이면 선명하게 보인다. 다음과 같이 사용한다.</p>
+                            <pre>
+p {
+opacity:0.5;
+}
+                            </pre>
+                            <hr>
+                            <br>
+                        </div>
+
+                        <div class="documentitem" id="doc_9">
+                            <p>
+                                지난 시간 동안 프로젝트를 하나 진행하면서 취약점을 어느 정도 보완했다. 
+                                이제 CSS Advanced를 배우며 조금 더 수준 높은 프로젝트를 진행할 수 있도록 배워보려 한다. 
+                            </p>
+                            <hr>
+                            <h2>CSS Rounded Corners</h2>
+                            <p>사실 이건 border-radius의 연장선이다.</p>
+                            <p>다만 border-radius:10px는 4방향 모두 둥글게 만들었으므로 한 두 방향만 설정하기는 어려운 면이 있었다.</p>
+                            <p>그래서 Rounded Corners를 통해 그 방법을 알아보려 한다.</p>
+                            <p>사실 간단한다.</p>
+                            <ol>
+                            <li>border-radius:(value1) (value2) (value3) (value4): 왼쪽 위부터 시작해, 시계 방향으로 값을 각각 적용</li>
+                            <li>border-radius:(value1) (value2) (value3): 차례대로 왼쪽 위, 오른쪽 위와 왼쪽 아래, 오른쪽 아래에 적용</li>
+                            <li>border-radius:(value1) (value2): 차례대로 왼쪽 위와 오른쪽 아래, 오른쪽 위와 왼쪽 아래에 적용</li>
+                            <li>border-radius:(value1) : 네 개 모두에 적용</li>
+                            </ol>
+                            <p>나머진 전에 설명한 것과 동일하다.</p>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Border Images</h2>
+                            <p>테두리 디자인에 이미 정해져 있는 스타일을 사용하는 대신, 이미지를 사용해서 테두리를 설정할 수도 있다. </p>
+                            <p>다음과 같이 사용한다.</p>
+                            <pre>
+border-image:url(“파일경로”) (value1) (value2);
+                            </pre>
+                            <p>여기서 value1에는 이미지 어디를 자를지 결정하는 값으로 %와 그냥 숫자를 사용한다.</p>
+                            <p>%는 말 그대로 왼쪽 위부터 30%씩 자른다는 의미이다.</p>
+                            <p>총 9칸으로 잘라 왼쪽 위, 왼쪽 아래, 오른쪽 위, 오른쪽 아래는 각각 corner에 들어간다.</p>
+                            <p>그 사이에 있는 게 길게 늘어나서 border의 역할을 한다.</p><br>
+
+                            <p>value2는 그 길게 늘어나는 부분이 어떻게 늘어날지 정하는 부분이다.</p>
+                            <p>stretch, round 두가지 값을 가질 수 있다. stretch는 가운데 부분이 길게 연장된다. round는 둥글게 잘려서 반복된다.</p><br>
+                            <p>각각을 따로 설정할 수도 있다.</p>
+                            <p>border-image-source:url(“파일경로”) => 어떤 이미지를 쓸지</p>
+                            <p>border-image-slice:(value1) => 어떤 비율로 자를지</p>
+                            <p>border-image-width => 그 자른 부분을 얼마만큼의 두께로 설정할지</p>
+                            <p>border-image-repeat => 가운데 부분을 늘릴지, 반복할지 또는 둘 다 적용할지</p>
+                            <p>border-image-outset => border-box (Box Model 중) 와 Border사이 거리</p>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Backgrounds</h2>
+                            <p>이번에는 여러 장의 이미지를 배경에 설정하는 법을 배우려 한다.</p>
+                            <p>가져오는 방식은 지난 번과 같다. 단지 파일 경로가 두개로 늘어날 뿐이다.</p>
+                            <p>예: background-image:url(“파일경로”), url(“파일경로”);</p>
+                            <br>
+                            <p>background-position을 통해 각각의 위치를 설정해 줄 수 있다. 순서는 url 써준 순서다.</p>
+                            <p>예: background-position:left top, right bottom;</p><br>
+                            <p>마찬가지로 각각 반복 여부를 설정할 수 있다.</p>
+                            <p>예: background-repat:no-repeat, repeat-x;</p><br>
+                            <p>또는 shorthand로 다음과 같이 설정할 수 있다.</p>
+                            <p>background:url(“파일경로”) left top no-repeat, url(“파일경로”) right top no-repeat;</p><br>
+                            <p>background 이미지 크기를 조정할 때는 background-size를 사용한다.</p>
+                            <p>value 값은 width및 height 또는 contain, cover값이 들어간다.</p>
+                            <p>background-size:100px 80px; /*100px: 가로 80px: 세로*/</p>
+                            <p>background-size:contain /*이미지 전체가 표시될 정도 까지만 이미지가 축소되거나 확대 됨. */</p>
+                            <p>background-size:cover /*영역 전체가 덮이도록 이미지가 축소되거나 확대 됨.. */</p><br>
+                            <p>background가 element내 어느 구역을 기준으로 할지 설정할 수도 있다. 이는 background-origin을 이용한다.</p>
+                            <p>background-origin:(value);</p>
+                            <p>value에 들어갈 수 있는 값은 content-box, border-box, padding-box 가 있다. </p><br>
+
+                            <p>장황하므로 정리를 하면</p>
+                            <dl>
+                            <dt>1)	background: url(“파일경로”) left top no-repeat, url(“파일경로”) right top repeat-x;</dt>
+                            <dd>이미지 입력</dd>
+                            <br>
+                            <dt>2)	background-size: cover, 100px 80px;</dt>
+                            <dd>이미지 사이즈 조정</dd>
+                            <br>
+                            <dt>3)	background-position: center, left top;</dt>
+                            <dd>이미지 위치 조정</dd>
+                            <br>
+                            <dt>4)	background-origin:border-box, content-box;</dt>
+                            <dd>이미지 배치 영역 조정</dd>
+                            </dl>
+                            <br>
+                            <hr>
+
+                            <h2>CSS Gradients</h2>
+                            <p>CSS로 배경에 그라데이션 효과를 넣을 수도 있다. 세 종류가 있으며 각각 다음과 같다.</p>
+                            <dl>
+                            <dt>1)	linear-gradient: 선형 그라데이션</dt>
+                            <dd>예: linear-gradient(to bottom, purple 20%, red)</dd>
+                            <dd>to bottom의 위치에는 방향 또는 각도가 들어간다.</dd>
+                            <dd>to bottom 이라고 입력하면 from top이 자동으로 포함된다.</dd>
+                            <dd>즉 자동적으로 위에서 아래를 향하는 방향으로 설정된다.</dd>
+                            <dd>각도를 입력하고 싶으면, 12시 정각 방향을 0도라고 했을 때 시계방향으로 몇 도 회전했는지 각도를 정하면 된다.</dd>
+                            <dd>즉 오른쪽은 90도, 왼쪽은 -90도 또는 270도이다.</dd>
+                            <br>
+                            <dd>purple 및 red는 색이 들어간다. 색은 몇 개가 들어가도 상관없다.</dd>
+                            <dd>20%는 해당 색이 차지할 비율을 의미한다. 그라데이션에서 어떤 색이 몇 퍼센트를 차지할 지 정할 수 있다.</dd>
+                            <dd>cf: repeating-linear-gradient은 쓰는 방식은 같은데, 그라데이션이 반복되도록 만들 수 있다.</dd>
+                            <br>
+
+                            <dt>2)	radial-gradient: 타원형(원형) 그라데이션</dt>
+                            <dd>예: radial-gradient(circle farthest corner at 60% 40%, red 20%, orange 30%, yellow);</dd>
+                            <dd>circle은 그라데이션의 모양을 나타낸다. circle(원형), ellipse(타원형)가 가능하다. </dd>
+                            <br>
+                            <dd>farthest corner at ~ 은 그라데이션의 사이즈를 조정하는데 쓰인다. 총 네 가지의 값이 있다.
+                                <ol>
+                                    <li>closest-side: 원형의 경우 가장 가까운 변과 그라데이션 외곽이 접하도록 사이즈가 조정된다. 타원형의 경우에도 가장 가까운 변과 그라데이션 외곽이 접하도록 자이즈가 조정된다.</li>
+                                    <li>closest-corner: 가장 가까운 꼭짓점과 접하도록 사이즈가 조정된다.</li>
+                                    <li>farthest-side: 1)의 반대다. closest-side의 경우 가까운 변과 만나도록 조정되었다면, 이건 가장 먼 변과 접하도록 조정된다. </li>
+                                    <li>farthest-corner: 마찬가지로 가장 먼 꼭짓점과 접하도록 사이즈가 조정된다.</li>
+                                </ol> 
+                            </dd>
+                            <dd>모양이 circle인 경우, “3) at (value)”에서의 value는 반지름을 의미한다.</dd>
+                            <dd>모양이 ellipse인 경우, “3) at (value1) (value2)”에서의 두 value는 각각 타원의 수평 수직 반지름을 의미한다.</dd>
+                            <dd>퍼센트로 작성할 경우 영역 크기에 비례하도록 조정된다. </dd>
+                            <dd>색은 linear-gradient와 동일하다.</dd>
+                            <dd>cf: 마찬가지로 repeating-radial-gradient 도 있다. 작성방식은 같지만 반복된다.</dd>
+                            <br>
+                            <dt>3)conic-gradient: 회전 그라데이션</dt>
+                            <dd>예: conic-gradient(from 180deg at 30% 45%,red 45deg, blue 90deg black 270 deg);</dd>
+                            <dd>from 180deg: 180도가 시작위치라는 의미이다. 12시 정각 방향이 0도이다.</dd>
+                            <dd>at 30% 45%: 회전 중심점의 위치를 설정하는 기능이다.</dd>
+                            <dd>첫 값은 수평, 두번째 값은 수직이다.</dd>
+                            <dd>red 45deg: 어디서부터 해당 색을 넣을지 정하는 기능이다.</dd>
+                            <dd>예를 들어 위에서 red 45deg, blue 90deg이므로 45도에서 90도까지 걸쳐 빨간색에서 파란색으로 변화한다.</dd>
+                            <dd>(cf: 마찬가지로 repeating-conic-gradient도 있다.)</dd>
+                            </dl>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Shadow</h2>
+                            <p>앞에서 배웠다시피 CSS에는 그림자를 넣는 기능이 있다.</p>
+                            <p>지금까지 텍스트에만 그림자를 넣을 수 있었다면 이제는 박스, 즉 어떤 element자체에 그림자를 넣을 수도 있다.</p>
+                            <p>텍스트는 앞서 배웠으므로 생략한다.</p>
+                            <br>
+                            <p>element에 그림자를 넣는 방식도 텍스트와 같다. 다만 속성의 이름이 다르다. 다음과 같이 사용한다.</p>
+                            <p>box-shadow: (value1) (value2) (value3) (value4) (value5) (value6);</p>
+                            <p>value1, value2: 각각 수평 수직 위치를 의미한다. 0은 현재 이미지의 위치를 의미한다. x,y축 좌표평면을 생각하면 쉽게 이해할 수 있다. </p>
+                            <p>value3: blur 효과량을 정하는 값이다. 크면 클수록 흐릿해진다.</p>
+                            <p>value4: spread 효과를 정하는 값이다. 크면 클수록 그림자의 크기가 커진다. 그림자와 element사이의 거리라고 생각하면 편하다.</p>
+                            <p>value5: shadow의 색이다.</p>
+                            <p>value6: inset 또는 outset이 들어갈 수 있다. 안쪽으로 들어간 그림자로 할지 또는 바깥으로 나온 그림자로 할지 정하는 기능이다.</p>
+                            <p>outset이 기계식 키보드 모양이라고 생각하면 편하다. inset은 그 반대다.</p>
+                            <hr>
+                            <br>
+                        </div>
+                        <div class="documentitem" id="doc_10">
+                            <p>
+                            지난 시간에는 이미 배운 것의 연장선 느낌이 강했다면 오늘은 아예 새로 배운 것이 많았다. 
+                            특히 애니메이션을 넣는 방법을 배웠으며 이를 이용해 여러 element를 한 층 더 고급스럽게 만들 수 있게 되었다.
+                            </p>
+                            <hr>
+                            <h2>CSS Text Effects</h2>
+                            <p>element안에 텍스트를 작성하다 보면 지나치게 긴 단어가 있어서 그 element를 빠져나오거나 다 표시 못하는 경우가 생긴다.</p>
+                            <p>이때 오늘 배울 Text Effect를 사용하면 해결할 수 있다.</p>
+                            <dl>
+                            <dt>1)	text-overflow</dt>
+                            <dd>말 그대로 글이 너무 길어서 사이즈가 정해져 있는 element내에 다 넣을 수 없었을 때 그 사실을 어떻게 사용자한테 알려줄지 알려주는 기능이다.</dd>
+                            <dd>다음과 같이 쓴다.</dd>
+                            <pre>
+“text-overflow:(value);”
+                            </pre>
+                            <dd>value에는 두가지 값이 들어갈 수 있다.</dd>
+                            <dd>먼저 clip은 element를 넘어가는 부분을 없는 것처럼 자르고 영역내에 표시할 수 있는 부분만 표시한다.</dd>
+                            <dd>여기서 자른다는 게 글자를 기준으로 자른다는게 아니라 글자가 잘리든 말든 보일 수 있는 영역만 보이게 만든다.</dd>
+                            <dd>두번째로 ellipsis를 넣을 수 있다. 이건 마지막에 …을 넣어서 내용이 더 있다는 것을 사용자에게 알려준다.</dd>
+                            <br>
+
+                            <dt>2)	word-wrap</dt>
+                            <dd>단어가 너무 긴 경우에도 영역을 벗어나는 경우가 생긴다.</dd>
+                            <dd>이 경우에 사용할 수 있다.</dd>
+                            <pre>
+“word-wrap:break-word”
+                            </pre>
+                            <dd>이러면 지나치게 긴 단어를 잘라 다음 줄로 넘어가게 해준다.</dd>
+                            <br>
+
+                            <dt>3)	word-break</dt>
+                            <dd>기본적으로 문장이 지나치게 길면 단어 중간에 끊어서 다음 줄로 넘긴다.</dd>
+                            <dd>이때 단어 중간에 끊는 것을 비선호할 수 있다. 이때 사용하는 것이 이 속성이다.</dd>
+                            <dd>다음과 같이 사용한다.</dd>
+                            <pre>
+“word-break: (value)”
+                            </pre>
+                            <dd>여기서 value에 들어갈 수 있는 값은 keep-all 또는 break-all 둘 중 하나다.</dd>
+                            <dd>keep-all은 단어를 기준으로 줄바꿈한다.</dd>
+                            <dd>즉 단어 중간에 잘려 다음 줄로 넘어가지 않는다.</dd>
+                            <dd>break-all은 단어 중간에 잘려 다음 줄로 넘어갈 수 있다.</dd>
+                            <br>
+
+                            <dt>4)	writing-mode</dt>
+                            <dd>글을 세로방향으로 쓰고 싶은 경우가 있을 수도 있다. 이 경우 사용하는 속성이다.</dd>
+                            <dd>다음과 같이 사용한다.</dd>
+                            <pre>
+“writing-mode: horizontal-bt”
+                            </pre>
+                            <dd>여기서 horizontal-bt를 vertical-rl로 <span title="bt를 tt로 바꾸거나 rl을 lr로 바꾸어도 효과는 달라지지 않는다." style="text-decoration:dotted underline">바꿔 쓰면</span> 수직방향으로 쓸 수 있다.</dd>
+                            </dl>
+                            <hr>
+                            <br>
+
+                            <h2>CSS 2D Transformation</h2>
+                            <p>뒤에 배울 transition을 좀 더 원활하게 사용할 수 있게 배우는 속성들이다. 주로 배울 것은 다음 속성이다.</p>
+                            <pre>
+“transform:(property)”
+                            </pre>
+                            <p>이제 property를 하나씩 배워보자.</p>
+                            <dl>
+                                <dt>1)	Transition</dt>
+                                <pre>
+“transform:transition((value1), (value2));”
+                                </pre>
+                                <dd>transition은 해당 element가 이동하도록 만든다.</dd>
+                                <dd>value1만큼 오른쪽, value2만큼 아래쪽으로 이동한다.</dd>
+                                <br>
+
+                                <dt>2)	Rotate</dt>
+                                <pre>
+“transform:rotate((value));
+                                </pre>
+                                <dd>rotate는 해당 element가 회전하도록 만든다.</dd>
+                                <dd>value만큼 회전한다. value가 양수면 반시계방향, 음수면 시계 방향으로 회전한다.</dd>
+                                <br>
+
+                                <dt>3)	Scale</dt>
+                                <pre>
+“transform:scale((value1),(value2));”
+                                </pre>
+                                <dd>scale은 해당 element의 사이즈를 조절한다.</dd>
+                                <dd>value1은 가로 확대/ 축소 비율이고 value2는 세로 확대/축소 비율이다.</dd>
+                                <dd>예를 들어 value1이 3이라면 가로가 원래 길이의 3배가 된다.</dd>
+                                <dd>참고로, 가로 및 높이 중 한 쪽만 비율을 조정하고 싶으면 scaleX 또는 scaleY를 이용할 수도 있다.</dd>
+                                <dd>전자가 가로길이 조정, 후자가 세로길이 조정을 담당한다.</dd>
+                                <dd>예: transform:scaleX(2);</dd>
+                                <br>
+                                <dt>4)	Skew</dt>
+                                <pre>
+“transform:skew((value1), (value2))”
+                                </pre>
+                                <dd>value1, value2 각각 x축을 회전축으로 삼아 몇 도만큼 회전시킬지, y축을 회전축으로 삼아 몇도만큼 회전시킬지 정하는 기능이다.</dd>
+                                <dd>x,y 좌표평면 기준 왼손 돌린 방향이 양수다 (왼손 나사법칙).</dd>
+                                <br>
+                                <pre>
+“transform:skewX(50deg);”
+                                </pre>
+                                <dd>skewX는 X축 방향으로 element를 얼마만큼 회전할지 결정하는 속성이다.</dd>
+                                <dd>반대로 skewY는 Y축 방향으로 element를 얼마만큼 회전할지 결정하는 속성이다.</dd>
+                                <br>
+
+                                <dt>5)	Matrix</dt>
+                                <dd>지금까지 배운 것들을 한 번에 할 수 있게 해주는 기능이다. 다음과 같이 사용한다.</dd>
+                                <pre>
+“transform:matrix((value1), (value2), (value3), (value4), (value5), (value6));”
+value1: scaleX
+value2: skewY
+value3: skewX
+value4: scaleY
+value5: translateX
+value6: translate
+                                </pre>
+                            </dl>
+                            <hr>
+                            <br>
+
+                            <h2>CSS 3D Transforms</h2>
+                            <p>앞서 2D Transforms를 배웠다면 이제는 3D다. 차원이 하나 증가했을 뿐 의미는 각 속성의 의미는 같다.</p>
+                            <dl>
+                                <dt>1)	Rotate</dt>
+                                <pre>
+“transform:rotateX((value)) or rotateY((value)) or rotateZ((value))”
+                                </pre>
+                                <dd>rotateX는 X축을 회전축으로 삼아 value만큼 돌린다.</dd>
+                                <dd>rotateY는 Y축을 회전축으로 삼아 value만큼 돌린다.</dd>
+                                <dd>rotateZ는 Z축을 회전축으로 삼아 value만큼 돌린다.</dd>
+                                <br>
+                                <dt>2)	Translate</dt>
+                                <pre>
+“transform:translate3d((value1), (value2), (value3));”
+또는
+“transform:translateX((value1)) or translateY((value2)) or translate((value3));”
+                                </pre>
+                                <dd>value1: X축으로 얼마나 움직일지</dd>
+                                <dd>value2: Y축으로 얼마나 움직일지</dd>
+                                <dd>value3: Z축으로 얼마나 움직일지</dd>
+                                <br>
+
+                                <dt>3)	Scale</dt>
+                                <pre>
+“transform:scale3d((value1),(value2),(value3));”
+또는
+“transfom:scaleX((value1)) or scaleY((value2)) or scaleZ((value3));”
+                                </pre>
+                                <dd>value1: X축을 몇 배 할지</dd>
+                                <dd>value2: Y축을 몇 배 할지</dd>
+                                <dd>value3: Z축을 몇 배 할지</dd>
+                                <br>
+                                <dt>4)	Matrix</dt>
+                                <pre>
+“transform:matrix3d(v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15,v16);”
+                                </pre>
+                                <dd>w3Schools에 설명이 없어 찾아봤더니 matrix처럼 여러 속성을 합해서 쓸 수 있는 기능은 맞다.</dd>
+                                <dd>그런데 추가적인 계산이 필요한 것 같다. 행렬 형태로 나타나는데, 아직 뭔지 모르겠다…</dd>
+                                <dd>나중에 행렬을 배우면 다시 돌아와 학습하자.</dd>
+                            </dl>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Transition</h2>
+                            <p>이제 2D Transform과 3D Transform을 배웠으므로 이걸 적용하여 애니메이션을 적용할 수 있는 방법을 배울 차례다.</p>
+                            <p>애니메이션에 사용되는 속성은 크게 두가지다.</p>
+                            <ol>
+                            <li>Transition</li>
+                            <li>Animation</li>
+                            </ol>
+                            <p>둘 다 장단점이 있다. 먼저 이번 장에선 Transition부터 알아보자.</p>
+                            <dl>
+                                <dt>(1)	transition</dt>
+                                <pre>
+.temp {
+width: 100px;
+height:100px;
+transition:width 0.5s, height 0.5s, transform 0.5s;
+}
+.temp:hover {
+width:200px;
+height:200px;
+transform:rotate(180deg);
+}
+                                </pre>
+                                <dd>transition은 변화가 발생하면 작동한다.</dd>
+                                <dd>즉 :hover 상태에 진입하면 width, height, rotate에 변화가 발생하므로 transition이 작동한다.</dd>
+                                <dd>여기서 transition에 width가 0.5초 동안, height가 0.5초 동안, rotate가 0.5초 동안 바뀌도록 설정했으므로 0.5초 안에 해당 변화가 발생한다.</dd>
+                                <dd>주의할 점은 transition에 몇 초 동안 발생할 것인지(duration) 숫자를 입력해 주지 않으면 작동하지 않는다.</dd>
+                                <dd>기본값이 0이기 때문이다.</dd>
+                                <br>
+
+                                <dt>(2)	transition-timing-function</dt>
+                                <dd>transition-timing-function은 ease in 및 ease out 등 어떻게 애니메이션을 시작하고 진행하고 끝낼건지 설정하는 기능이다.</dd>
+                                <dd>다음과 같이 사용한다.</dd>
+                                <pre>
+“transition-timing-function:(value);”
+                                </pre>
+                                <dd>여기서 value에 들어갈 수 있는 값은 다음과 같다.</dd>
+                                <dd>ease: ease-in과 ease-out을 합한 효과.</dd>
+                                <dd>ease-in: 느리게 시작해서 점점 빠르게</dd>
+                                <dd>ease-out: 끝날 때 점점 느리게</dd>
+                                <dd>linear: 일정한 속도</dd>
+                                <dd>ease-in-out: 시작속도 및 종료 속도를 직접 설정</dd>
+                                <dd>cubic-bezier(v1,v2,v3,v4): 자신이 직접 정함.</dd>
+                                <br>
+                                <dt>(3)	transition-delay:</dt>
+                                <dd>변화가 발생하고 몇 초 동안 대기하도록 설정할 수 있게 만든 기능이다.</dd>
+                                <dd>즉 :hover상태가 되도 transition이 바로 실행되는 게 아니라, :hover상태가 몇 초 이상 유지되어야 transition이 실행되도록 만들 수 있다.</dd>
+                                <dd>다음과 같이 사용한다.</dd>
+                                <pre>
+“transition-delay: 1s”
+                                </pre>
+                            </dl>                          
+                            <hr>
+                            <br>
+
+                            <h2>CSS Animations</h2>
+                            <p>Transition처럼 애니메이션을 설정하는 기능이다.</p>
+                            <p>다만 transition은 ‘변화’가 발생해야 하지만 Animation은 그럴 필요가 없다.</p>
+                            <p>즉 Animation은 내가 원할 때 원하는 애니메이션을 원하는 방식으로 재생할 수 있다.</p>
+                            <p>또 Animation은 여러 element에 transition보다 쉽게 가져다 쓸 수 있다.</p>
+                            <dl>
+                            <dt>(1)	@keyframes</dt>
+                            <dd>keyframes에 어떤 속성을 바꾸고 싶은지를 설정한다. 예시를 보자.</dd>
+                            <pre>
+@keyframes AnimationName {
+from {border-color:red;}
+to {border-color:black;}
+}    
+                            </pre>
+                            <dd>모서리 색을 빨간색으로부터 검은색으로 바꾸는 기능이다.</dd>
+                            <pre>
+@keyframes AnimationName {
+10% {border-color:red;}
+20% {border-color:orange;}
+30% {border-color:yellow;}
+40% {border-color:green;}
+50% {border-color:blue;}
+60% {border-color:purple;}
+70% {border-color:pink;}
+80% {border-color:white;}
+90% {border-color:tomato;}
+100% {border-color:red;}
+}
+                            </pre>
+                            <dd>이렇게 퍼센트로 설정할 수도 있다.</dd>
+                            <br>
+
+                            <dt>(2)	animation-name, animation-duration</dt>
+                            <dd>위 @keyframes 예시를 보면 AnimationName이라고 쓴 부분이 있다.</dd>
+                            <dd>이게 Animation의 이름이다.</dd>
+                            <dd>애니메이션을 사용하고 싶으면 그 애니메이션을 적용하고 싶은 selector에 animation-name을 이용해서 넣어주어야 한다.</dd>
+                            <dd>또, transition과 마찬가지로 animation이 작동되게 하려면 몇 초 동안 동작할지 duration도 정해주어야 한다.</dd>
+                            <dd>이는 animation-duration으로 설정한다.</dd>
+                            <pre>
+.temp {
+animation-name:AnimationName;
+animation-duration:10s;
+}
+                            </pre>
+                            <br>
+
+                            <dt>(3)	animation-delay</dt>
+                            <dd>transition-delay처럼 애니메이션이 몇 초 뒤에 시작할지 설정하는 기능이다.</dd>
+                            <dd>transition-delay와 같은 방식으로 사용되므로 생략한다.</dd>
+                            <br>
+
+                            <dt>(4)	animation-iteration-count</dt>
+                            <dd>애니매이션을 몇 번 반복할지 설정하는 기능이다. 다음과 같이 사용한다.</dd>
+                            <pre>
+“animation-iteration-count:5”
+                            </pre>
+                            <dd>5번 반복하는 기능이다.</dd>
+                            <dd>참고로 숫자 대신 infinite를 사용하여 영원히 반복되도록 만들 수 있다.</dd>
+                            <br>
+
+                            <dt>(5)	animation-direction</dt>
+                            <dd>@keyframes로 설정한 애니매이션의 재생방향을 설정하는 기능이다.</dd>
+                            <dd>다음과 같이 사용한다.</dd>
+                            <pre>
+“animation-direction:(value)”
+                            </pre>
+                            <dd>value에 들어갈 수 있는 값은 다음과 같다.</dd>
+                            <ol>
+                                <li>normal: 기본값. 정방향</li>
+                                <li>reverse: 역방향</li>
+                                <li>alternate: 순방향으로 재생되다, 끝에 다다르면 다시 역방향으로 재생</li>
+                                <li>alternate-reverse: 역방향으로 재생되다, 끝에 다다르면 순방향으로 재생</li>
+                            </ol>
+                            <br>
+
+                            <dt>(6)	animation-timing-function</dt>
+                            <dd>transition-timing-function과 같은 기능이다. 사용방법은 동일하므로 생략한다.</dd>
+                            <br>
+
+                            <dt>(7)	animation-fill-mode</dt>
+                            <dd>애니메이션이 진행되고 있지 않을 때 어떻게 할지 설정하는 기능이다.</dd>
+                            <dd>예를 들어, :hover 상태로 변화했을 때 animation이 실행되도록 했다고 하자.</dd>
+                            <dd>그런데 애니메이션이 실행되고 나면 그 이후는 어떻게 될까?</dd>
+                            <dd>다시 원래대로 돌아갈까? 애니메이션 마지막 상태를 유지할까?</dd>
+                            <dd>이것을 결정하는 기능이다. 다음과 같이 사용한다.</dd>
+                            <pre>
+“animation-fill-mode:(value)”
+                            </pre>
+                            <dd>value에 들어갈 수 있는 값은 다음과 같다.</dd>
+                            <ol>
+                                <li>none: 기본값. 애니메이션이 실행된 후, 애니메이션이 실행되기 전 상태로 돌아간다.</li>
+                                <li>forwards: 애니메이션 실행된 후 마지막 값 유지 (animation-direction에 의존)</li>
+                                <li>backwards: 애니메이션 실행된 후 첫번째 값 유지 (animation-direction에 의존)</li>
+                                <li>both: forwards와 backwards를 합한 것이다. (첫번째 값과 마지막 값을 조합한다.)</li>
+                            </ol>
+                            <br>
+                            <dt>(8)	animation</dt>
+                            <dd>지금까지 배운 것의 shorthand다.</dd>
+                            <dd>다음과 같이 설정한다.</dd>
+                            <pre>
+“animation:(name) (duration) (timing-function) (delay) (iteration-count) (direction);”
+                            </pre>
+                            <dd>‘이 이름의 애니메이션을 몇 초동안 이렇게 시작하고 끝내는데 몇 초 뒤에 시작하고, 몇 번을 이 방향으로 재생하라’</dd>
+                            </dl>
+                            <hr>
+                            <br>
+                        </div>
+
+                        <div class="documentitem" id="doc_11">
+                            <p>오늘 드디어 Javascript와 연관된 부분을 제외하고 CSS가 끝났다. 이제 빨리 javascript를 배우고 정적 웹페이지 하나 만들어보자.</p>
+                            <hr>
+
+                            <h2>CSS Image Reflection</h2>
+                            <p>이미지에 반사기능을 넣는 기능이다.</p>
+                            <p>element에 그림자를 넣을 때 box-shadow를 했 듯이 element에 반사기능을 넣으려면 box-reflect를 하면 된다.</p>
+                            <p>다음과 같이 사용한다.</p>
+                            <pre>
+“box-reflect:(value1) (value2) (value3)”
+                            </pre>
+                            <p>value1에는 below, above, left, right 네 가지가 들어갈 수 있다.</p>
+                            <p>value2에는 반사된 이미지와 원래 이미지 사이의 거리를 넣는다.</p>
+                            <p>value3에는 linear-gradient를 넣어 그라데이션 효과를 넣을 수 있다.</p>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Object-fit, Object-position</h2>
+                            <p>이미지나 비디오를 넣을 때 우리는 그 이미지를 포함하고 있는 element에 그 이미지나 비디오가 꽉차게 배치 되는 걸 원할 때가 있다.</p>
+                            <p>그런데 그 이미지나 비디오가 container의 크기에 맞지 않는 경우도 있고, 또 원하는 부분으로 배치되지 않을 경우도 있다.</p>
+                            <p>이를 해결할 수 있는 기능이 Object-fit과 Object-position이다.</p>
+                            <p>다음과 같이 사용한다.</p>
+                            <pre>
+“object-fit:(value)”
+                            </pre>
+                            <p>value에는 다음 5가지 값이 들어갈 수 있다.</p>
+                            <dl>
+                            <dt>1)	fill</dt>
+                            <dd>기본값. container를 채우기 위해 이미지가 늘어나거나 축소될 수도 있다. (비율 무관)</dd>
+                            <br>
+                            <dt>2)	contain</dt> 
+                            <dd>container를 채우기 위해 이미지의 비율을 유지하면서 늘어나거나 축소된다.</dd>
+                            <dd>다만 conatiner와 img의 비율에 차이가 있는 경우 이미지의 한 변이 container의 한 변과 접할 때 까지만 비율이 조정된다.</dd>
+                            <br>
+                            <dt>3)	cover</dt>
+                            <dd>container를 채우기 위해 이미지의 비율을 유지하면서 늘어나거나 축소된다.</dd>
+                            <dd>다만 contain과 달리 container를 꽉 채울 때까지, 이미지에 잘리는 부분이 있더라도 확대되거나 축소된다.</dd>
+                            <br>
+                            <dt>4)	none</dt>
+                            <dd>이미지 크기가 조정되지 않는다. 원본 사이즈 그대로 유지된다.</dd>
+                            <br>
+                            <dt>5)	scale-down</dt>
+                            <dd>none또는 contain중 사이즈가 작은 것으로 축소된다.</dd>
+                            <br>
+                            </dl>
+                            <hr>
+                            <h2>CSS Multiple Columns</h2>
+                            <p>나처럼 자기소개서를 쓰려고 하거나 뉴스기사를 작성할 때 보면 여러 단으로 나눠 작성하는게 보기 좋은 경우가 있다.</p>
+                            <p>그 방법을 설명하는 기능이다.</p>
+                            <p>다음 속성들로 설정한다.</p>
+                            <dl>
+                                <dt>1)	column-count</dt>
+                                <pre>
+“column-count:(value)”
+                                </pre>
+                                <dd>단의 개수를 결정하는 속성이다. value에 4가 들어가면 4개의 단으로 나눠진다.</dd>
+                                <br>
+                                <dt>2)	“column-gap:(value)”</dt>
+                                <dd>앞서 정한 문단끼리의 간격을 정하는 기능이다. 이미 알다시피 px등이 들어갈 수 있다.</dd>
+                                <br>
+                                <dt>3)	“column-rule-style:(value)”</dt>
+                                <dd>앞서 정한 문단끼리 분류하는데 쓰이는 선의 종류를 결정하는 기능이다. border-style과 동일한 값이 들어간다.</dd>
+                                <br>
+                                <dt>4)	“column-rule-width:(value)”</dt>
+                                <dd>앞서 정한 문단끼리 분류하는데 쓰이는 선의 길이를 결정하는 기능이다. border-width와 비슷하다고 보면 된다.</dd>
+                                <br>
+                                <dt>5)	“column-rule-color:(value)”</dt>
+                                <dd>앞서 정한 문단끼리 분류하는데 쓰이는 선의 색상을 결정하는 기능이다. border-color와 비슷하다고 보면 된다.</dd>
+                                <br>
+                                <dt>6)	“column-rule:(value1) (value2) (value3)”</dt>
+                                <dd>앞서 배운 column-rule연관 속성의 shorthand다. border shorthand와 똑같이 사용한다.</dd>
+                                <dd>예: column-rule:1px solid red;</dd>
+                                <br>
+                                <dt>7)	“column-span:(value)”</dt>
+                                <dd>column앞에 오는 element가 column에 포함될지 말지 설정하는 기능이다. 예를 들어 다음과 같은 코드가 있다고 해보자.</dd>
+                                <pre>
+&lt;div&gt;
+&lt;h2&gt;The Greatest of All Time&lt;/h2&gt;
+I am the Greatest of All Time. No one knows I am the one who can save the world. 
+I am the secret of the world who is trying to save all people. 
+&lt;/div&gt;
+                                </pre>
+
+                                <dd>그리고 div에 column이 설정되었다고 해보자.</dd>
+                                <dd>그럼 &lt;h2&gt;는 column에 포함되어야 할까, 아니면 제외되어야 할까?</dd>
+                                <dd>상식적으로 생각해보면 제외되는게 당연하다.</dd>
+                                <dd>그러나 그냥 저 상태로 두면 h2가 column에 포함된다.</dd>
+                                <dd>즉 h2를 column으로부터 제외할 수 있는 기능이 필요하다.</dd> 
+                                <dd>그 기능이 column-span이다.</dd>
+                                <dd>value에는 두 가지 값 all과 none이 들어갈 수 있다.</dd>
+                                <dd>all의 경우 h2는 column으로부터 제외된다.</dd>
+                                <dd>반대로 none의 경우 h2는 column에 포함된다.</dd>
+                                <br>
+                                <dt>8)	“column-width:(value)”</dt>
+                                <dd>각 column의 최적의 가로길이를 설정하는 기능이다.</dd>
+                                <dd>column-count가 없을 때 column-width를 글에 적용하면 column-width를 적용했을 때 필요한 문단의 개수로 자동 계산, 설정된다. </dd>
+                                <dd>column-count와 같이 설정했으면 column-width가 우선된다.</dd>
+                            </dl>
+                            <hr style="border:0.5px solid rgb(204, 204, 204);">
+                            <p>Object-position은 다음과 같이 사용한다.</p>
+                            <pre>
+“object-position:(value1) (value2)”
+                            </pre>
+                            <p>value1과 value2는 각각 방향값이 들어갈 수 있다.</p>
+                            <p>예를 들어 left top, left bottom, right top, right bottom등이 들어갈 수 있다.</p>
+                            <p>구체적인 위치도 px를 통해 설정할 수 있다.</p>
+                            <p>이때 value1과 value2의 값은 container왼쪽 위와 img왼쪽 위의 거리를 의미한다.</p>
+                            <p>퍼센트를 넣을 수도 있다.</p>
+                            <p>이미지 왼쪽 위가 container왼쪽 위에 붙었을 때를 0% 0%라고 하고, 오른쪽 아래 붙었을 때를 100% 100%라고 한다.</p>
+                            <p>즉 이미지를 한 가운데 배치하려면 50% 50%를 넣으면 된다.</p>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Box-Sizing</h2>
+                            <p>우리는 지금까지 element의 크기를 조정하기 위해 height, width를 이용해왔다.</p>
+                            <p>그런데 알다시피 padding, margin, border를 설정한 경우 그것들을 따로 더해주어야 실제 width와 height가 나온다는 번거로움이 있었다. </p>
+                            <p>이를 해결할 수 있는 기능이 box-sizing 속성이다. 다음과 같이 사용한다.</p>
+                            <pre>
+“box-sizing:border-box”
+                            </pre>
+                            <p>이러면 우리가 설정해 주는 width와 height가 border, margin, padding을 모두 합한 길이가 된다.</p>
+                            <p>매우 유용하므로 다음 코드를 CSS에 자주 넣어준다.</p>
+                            <pre>
+* {
+box-sizing:border-box;
+}
+                            </pre>
+                            <hr>
+                            <br>
+
+                            <h2>CSS Flexbox</h2>
+                            <p>우리는 positon, float같이 element를 배치하는 기능을 여럿 배워왔다.</p>
+                            <p>그러나 실제 사용해보면 원하는 대로 배치되지 않는 경우가 꽤 있다.</p>
+                            <p>예를 들어 positon:relative와 positon:absolute는 두 가지 element에 각각 설정해 주어야 한다는 번거로움이 생긴다.</p>
+                            <p>또한 position:absolute는 일반적인 배치 흐름에서 벗어나므로 다른 element와 배치할 때 의도치 않을 문제가 생기기도 한다.</p>
+                            <p>float도 마찬가지로 일반적인 배치 흐름에서 벗어나는 경우가 생기므로 문제가 발생하는 경우가 있다.</p>
+                            <p>이를 해결할 수 있는 것이 flexbox이다.</p>
+                            <p>flexbox는 크게 두가지로 나눈다. </p>
+                            <p>하나는 flex container로 flex element의 컨테이너 역할을 한다.</p>
+                            <p>flex items는 flex container에 배치되는 element로 실제 배치되어야 하는 item을 지칭한다. </p>
+                            <p>각각 사용되는 속성이 다르며 이 분류에 따라 하나씩 알아보자.</p>
+
+                            <h3>&#x2022;flex container</h3>
+                            <p>flex container에는 다음 속성을 설정할 수 있다.</p>
+                            <dl>
+                            <dt>(1)	“display:flex”</dt>
+                            <dd>해당 element를 flex container로 설정하는 기능이다.</dd>
+                            <br>
+                            <dt>(2)	“flex-direction:(value)”</dt>
+                            <dd>flex items의 배치 방향을 정하는 속성이다.</dd>
+                            <dd>value에는 column, column-reverse, row, row-reverse가 들어갈 수 있다.</dd>
+                            <dd>column은 세로 방향 배치, row는 가로 방향 배치이며 reverse는 items의 순서를 역으로 바꾼다.</dd>
+                            <br>
+                            <dt>(3)	“flex-wrap:(value)”</dt>
+                            <dd>value에는 wrap 또는 nowrap, wrap-reverse가 들어갈 수 있다.</dd>
+                            <dd>앞서 word-wrap은 단어가 너무 긴 경우 잘라 넘어갈 수 있게 했다.</dd>
+                            <dd>이것도 비슷한 속성이다.</dd>
+                            <dd>wrap으로 설정된 경우 스크린 사이즈를 줄였을 때 flex-item이 원래 사이즈를 유지한 채 더 이상 줄어들 수 없으면 두 줄, 세 줄로 넘어가도록 만드는 기능이다.</dd>
+                            <dd>만약 nowrap으로 설정된 경우 flex item의 크기가 줄어든다.</dd>
+                            <dd>wrap-reverse는 wrap의 기능이지만 아래로 flex item이넘어가는 게 아니라 위로 넘어간다.</dd>
+                            <br>
+                            <dt>(4)	“flex-flow:(value1) (value2)”</dt>
+                            <dd>앞서 배운 flex-direction과 flex-wrap의 shorthand다. value1에는 direction이 value2에는 wrap이 들어간다.</dd>
+                            <br>
+                            <dt>(5)	“justify-content:(value)”</dt>
+                            <dd>flex-item을 가로로 정렬하는 기능이다. value에는 다음 다섯 가지 값이 들어갈 수 있다.</dd>
+                            <dd>center: 가운데로 정렬</dd>
+                            <dd>flex-start: 기본값. 왼쪽에 정렬</dd>
+                            <dd>flex-end: 오른쪽에 정렬</dd>
+                            <dd>space-around: 가운데를 기준으로 정렬되나, flex element좌우에 빈칸이 생김.</dd>
+                            <dd>space-between: 가운데를 기준으로 정렬되나, flex element들 사이에 빈칸이 생김.</dd>
+                            <br>
+                            <dt>(6)	“align-items:(value)”</dt>
+                            <dd>flex-item을 세로로 정렬하는 기능이다.</dd> 
+                            <dd>value에는 다음 다섯가지 값이 들어갈 수 있다.</dd>
+                            <dd>center: 가운데로 정렬</dd>
+                            <dd>flex-start: 기본값. 위에 정렬.</dd>
+                            <dd>flex-end: 아래에 정렬.</dd>
+                            <dd>stretch: flex-container에 맞게 flex item이 세로 방향으로 연장된다.</dd>
+                            <dd>baseline: 텍스트 baseline에 맞게 flex item이 정렬된다. 이때 flex item의 세로 크기는 상관이 없다.</dd>
+                            <br>
+                            <dt>(7)	“align-content:(value)”</dt>
+                            <dd>마찬가지로 flex-item을 세로로 정렬하는 기능이다.</dd>
+                            <dd>단 flex container가 한 줄일 경우align-items와 차이가 없다.</dd>
+                            <dd>즉 wrap될 경우에 줄간 간격 등을 설정하는 기능이다.</dd>
+                            <dd>value에는 다음 6가지 값이 들어갈 수 있다.</dd>
+                            <dd>space-between: 가운데를 기준으로 정렬되나, flex element들 사이에 빈칸이 생김.</dd>
+                            <dd>space-around: 가운데를 기준으로 정렬되나, flex element좌우에 빈칸이 생김.</dd>
+                            <dd>stretch: flex container의 남은 공간을 채우기 위해 flex item이 연장됨.</dd>
+                            <dd>center: 가운데로 정렬</dd>
+                            <dd>flex-start: 위로 정렬</dd>
+                            <dd>flex-end: 아래로 정렬</dd>
+                            </dl>
+                            <br>
+                            <h3>&#x2022;flex items</h3>
+                            <dl>
+                            <dt>(1)	“order:(value)”</dt>
+                            <dd>value에는 숫자가 들어갈 수 있고 해당 element의 flex container에서의 순서를 설정할 수 있다.</dd>
+                            <dd>숫자가 작을수록 앞에 온다.</dd>
+                            <br>
+                            <dt>(2)	“flew-grow:(value)”</dt>
+                            <dd>flex container에 공간이 남을 때 해당 element의 상대적 크기를 설정하는 기능이다.</dd>
+                            <dd>단 비율이라고 %가 들어가지 않고 숫자로 설정한다.</dd>
+                            <dd>예를 들어 3개의 element를 각각 2, 4, 6으로 설정했다면 각각의 크기 비율은 1:2:3으로 설정된다. 기본값은 0이다.</dd>
+                            <br>
+                            <dt>(3)	“flex-shrink:(value)”</dt>
+                            <dd>flex container에 공간이 부족해 질 때 해당 element의 상대적 크기를 설정하는 기능이다.</dd>
+                            <dd>flex-grow와 마찬가지로 value에 숫자가 들어가지만 이 속성은 다른 것들과 비교해서 얼마나 작아질지 설정하는 기능이다. 기본값이 1이다.</dd>
+                            <br>
+                            <dt>(4)	“flex-basis:(value)”</dt>
+                            <dd>해당 flex item의 초기 크기를 설정하는 기능이다. width처럼 200px 등의 값이 들어간다.</dd>
+                            <br>
+                            <dt>(5)	“flex:(value1) (value2) (value3)”</dt>
+                            <dd>flex-grow, flex-shrink, flex-basis 의 shorthand이다.</dd>
+                            <dd>value1에 flex-grow가 value2에 flex-shrink가 value3에 flex-basis가 들어간다.</dd>
+                            <br>
+                            <dt>(6)	“align-self:(value)”</dt>
+                            <dd>flex-container의 align-items와 같은 기능이나 자기 자신을 정렬하는 기능이다.</dd>
+                            <dd>flex-container의 align-items기능을 덮어쓴다.</dd>
+                            <dd>값은 align-items와 동일한 값이 들어가므로 생략한다.</dd>
+                            </dl>
+                            <hr>
+                        </div>
+                    </div>
+                    </article>
+                </div>
+                <div id="noname2"></div>
+            </div>
+        </div>
+
+        <footer>
+            <br>
+            <div id="footer_grey">
+                <div id="footer_white">
+                    <h4>This Website is Made for College of Software, Kyunghee University.
+                        <br>All Rights Reserved.</h4>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="../js/listcontrol.js"></script>
+</html>

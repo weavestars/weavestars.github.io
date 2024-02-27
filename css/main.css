@@ -1,0 +1,112 @@
+html,body{
+    height:100%;
+}
+body{
+    background-size:cover;
+    background-position:50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.header{
+    font-family:Quicksand, sans-serif,'Times New Roman', Times, serif;
+    font-size:5vw;
+    box-sizing: border-box;
+    text-align: center;
+    text-shadow:3px 3px 3px black;
+    transition:opacity 0.5s;
+    transition-timing-function: ease-out;
+    color:white;
+    opacity:50%;
+    cursor:context-menu;
+}
+.header:hover{
+    opacity:0%;
+}
+.arrow_top_left{
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:0;
+    opacity:40%;
+
+}
+.arrow_top_right{
+    position:absolute;
+    top:10px;
+    right:10px;
+    z-index:0;
+    opacity:40%;
+}
+.arrow_bottom_left{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    z-index:0;
+    opacity:40%;
+}
+.arrow_bottom_right{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    z-index:0;
+    opacity:40%;
+}
+.arrow_top_left:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+.arrow_top_right:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+.arrow_bottom_left:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+.arrow_bottom_right:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+.battery{
+    position:absolute;
+    top:30px;
+    right:50px;
+    width:70px;
+    height:70px;
+    opacity:50%;
+}
+.battery:hover{
+    opacity:60%
+}
+.reset{
+    width:3vw;
+    height:3vw;
+    position:absolute;
+    right:10px;
+    top:45%;
+    background-color: black;
+    border:1vw solid rgb(161, 161, 161);
+    border-radius:50%;
+    cursor: pointer;
+    opacity:50%;
+    
+}
+.reset:hover{
+    background-color: rgb(34, 34, 34);
+    cursor: pointer;
+}
+#help{
+    position:absolute;
+    right:3%;
+    top:15%;
+    width:3vw;
+    height:3vw;
+    opacity:30%;
+}
+#help:hover{
+    opacity:40%;
+    cursor:pointer;
+}
+
